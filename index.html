@@ -5,22 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CRT Styled Webpage</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
   </head>
   <body>
-    <!-- Splash Screen -->
-    <!-- <div id="splash">
-      <img src="DS_Floppy.png" alt="Splash Image" />
-    </div> -->
-
     <!-- First Splash Screen -->
     <div id="splash1" class="splash">
-        <img src="DS_Floppy.png" alt="Splash Image" />
+      <img src="DS_Floppy.png" alt="Splash Image" />
     </div>
 
     <!-- Second Splash Screen -->
-    <div id="splash2" class="splash2" style="display: none;">
-        <div class="terminal">
-            <pre id="terminal-text">
+    <div id="splash2" class="splash2" style="display: none">
+      <div class="terminal">
+        <pre id="terminal-text">
               <span data-line="/////////////////////////////////////////////////" class="line"></span>
               <span data-line="AMI BIOS (C) Digital Sunset, Inc." class="line"></span>
               <span data-line="Release Date: 02/15/1997" class="line"></span>
@@ -35,40 +31,717 @@
               <span data-line="C:\>" class="line"></span>
               <span data-line="/////////////////////////////////////////////////" class="line"></span>
               </pre>
-            <span></span>
-          </div>
+        <span></span>
+      </div>
     </div>
 
     <!-- Main Content -->
-    <div id="main-content" style="display: none;">
-        <!-- Your main page content goes here -->
-        <h1>Welcome to My Website</h1>
-        <p>Here is the main content of the website.</p>
-    </div>
-
-    <!-- Main Content -->
-    <!-- <div id="main-content" style="display: none"> -->
+    <div id="main-content" style="display: none">
       <!-- Your main page content goes here -->
-      <!-- <div class="terminal">
-        <pre id="terminal-text">
-          <span data-line="/////////////////////////////////////////////////" class="line"></span>
-          <span data-line="AMI BIOS (C) Digital Sunset, Inc." class="line"></span>
-          <span data-line="Release Date: 02/15/1997" class="line"></span>
-          <span data-line="CPU: Intel Pentium MMX 200 MHz" class="line"></span>
-          <span data-line="Checking NVRAM......" class="line"></span>
-          <span data-line="Initializing USB Controllers ...... Done" class="line"></span>
-          <span data-line="Auto Detecting Primary Master..... WDC-00AUA1" class="line"></span>
-          <span data-line="Auto Detecting Secondary Slave..... CD-ROM Drive" class="line"></span>
-          <span data-line="Press DEL to enter Setup" class="line"></span>
-          <span data-line="Booting from CD-ROM ....." class="line"></span>
-          <span data-line="Starting MS-DOS....." class="line"></span>
-          <span data-line="C:\>" class="line"></span>
-          <span data-line="/////////////////////////////////////////////////" class="line"></span>
-          </pre>
-        <span id="cursor"></span>
-      </div> -->
-      <!-- <h1>Welcome to My Website</h1>
-      <p>Here is the main content of the website.</p> -->
+       <!-- Navigation Bar -->
+      <div class="nav-bar">
+        <div class="navbar-left">
+          <div class="nav-item">
+            <span>About</span>
+            <div class="dropdown">
+              <a href="#" id="about-link">About</a>
+              <a href="#" id="resume-link">Resume</a>
+              <a href="#" id="contact-link">Contact</a>
+              <a href="#">Cookies</a>
+            </div>
+          </div>
+          <div class="nav-item">
+            <span>Web</span>
+            <div class="dropdown">
+              <a href="#" id="webdev-link">Webdev</a>
+            </div>
+          </div>
+          <div class="nav-item">
+            <span>VR</span>
+            <div class="dropdown">
+              <a href="#" id="vr-link">Projects</a>
+            </div>
+          </div>
+          <div class="nav-item">
+            <span>Hardware</span>
+            <div class="dropdown">
+              <a href="#" id="hardware-link">Projects</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Navbar Right (time/date/fullscreen button) -->
+        <div class="navbar-right">
+          <!-- Fullscreen button -->
+          <button id="fullscreen-btn" class="fullscreen-btn">
+            <img
+              src="fullscreen_button.png"
+              alt="Fullscreen Button"
+              class="fullscreen-icon"
+              id="fullscreen-icon"
+            />
+            <span class="tooltip">Toggle fullscreen</span>
+            <!-- Tooltip text -->
+          </button>
+
+          <!-- Close Windows Button -->
+          <button id="close-windows-btn" class="close-windows-btn">
+            <img
+              src="close_window.png"
+              alt="Close Windows Button"
+              class="close-icon"
+              id="close-icon"
+            />
+            <span class="tooltip">Close all windows</span>
+            <!-- Tooltip text -->
+          </button>
+
+          <!-- Time and Date -->
+          <span class="time-date navbar-right" id="time-date"></span>
+        </div>
+      </div>
+
+      <br /><br />
+
+      <!-- Draggable Icons -->
+
+      <!-- About Icon -->
+      <div class="icon-container">
+        <img
+          src="/images/about.png"
+          alt="Info Icon"
+          id="info-icon"
+          class="icon"
+        />
+        <span class="icon-text">About</span>
+        <span class="tooltip">Learn more about me</span>
+        <!-- Tooltip text -->
+      </div>
+
+      <!-- Hardware Icon -->
+      <div class="icon-container">
+        <img
+          src="/images/hardwareIcon.png"
+          alt="Hardware Icon"
+          id="info-iconHrdwr"
+          class="icon"
+        />
+        <span class="icon-text">Hardware</span>
+        <span class="tooltip">See my Hardware projects</span>
+        <!-- Tooltip text -->
+      </div>
+
+      <!-- Web Dev Icon -->
+      <div class="icon-container">
+        <img
+          src="/images/webDev.png"
+          alt="Webdev Icon"
+          id="info-iconWebDev"
+          class="icon"
+        />
+        <span class="icon-text">Web Dev</span>
+        <span class="tooltip">See my Web Dev projects</span>
+        <!-- Tooltip text -->
+      </div>
+
+      <!-- VR Icon -->
+      <div class="icon-container">
+        <img
+          src="/images/vrIcon.png"
+          alt="VR Icon"
+          id="info-iconVR"
+          class="icon"
+        />
+        <span class="icon-text">VR Stuff</span>
+        <span class="tooltip">See my VR work</span>
+        <!-- Tooltip text -->
+      </div>
+
+      <br /><br />
+
+      <!-- Blog Shortcut -->
+      <div class="icon-container">
+        <img
+          src="/images/blogIcon.png"
+          alt="Blog Icon"
+          id="info-iconBlog"
+          class="icon"
+        />
+        <span class="icon-text">Blog-Shortcut</span>
+        <span class="tooltip">Opens Blog in a new page</span>
+        <!-- Tooltip text -->
+      </div>
+
+      <!-- Github Shortcut -->
+      <div class="icon-container">
+        <img
+          src="/images/gitIcon.png"
+          alt="Git Icon"
+          id="info-iconGit"
+          class="icon"
+        />
+        <span class="icon-text">Github-Shortcut</span>
+        <span class="tooltip">Opens Github in a new page</span>
+        <!-- Tooltip text -->
+      </div>
+
+      <!-- LinkedIn Shortcut -->
+      <div class="icon-container">
+        <img
+          src="/images/linkedInIcon.png"
+          alt="LinkedIn Icon"
+          id="info-iconLinkIn"
+          class="icon"
+        />
+        <span class="icon-text">LinkedIn-Shortcut</span>
+        <span class="tooltip">Opens LinkedIn in a new page</span>
+        <!-- Tooltip text -->
+      </div>
+
+      <!-- Draggable Windows -->
+
+      <!-- Info window contents (including more icons) -->
+      <div id="info-window" class="info-window">
+        <div class="window-header" id="info-header">Information</div>
+        <span class="close-btn" id="info-close-btn">&times;</span>
+        <div class="window-body">
+          <!-- About Me Shortcut -->
+          <div class="icon-container">
+            <img
+              src="/images/aboutMe.png"
+              alt="Learn more about me..."
+              id="info-iconAboutMe"
+              class="icon"
+            />
+            <span class="icon-text blackText">About Me</span>
+            <span class="tooltip">Opens the about me Page</span>
+          </div>
+
+          <!-- Resume Shortcut -->
+          <div class="icon-container">
+            <img
+              src="/images/resumeIcon.png"
+              alt="Resume Icon"
+              id="info-iconResume"
+              class="icon"
+            />
+            <span class="icon-text blackText">Resume</span>
+            <span class="tooltip">Opens Resume Page</span>
+          </div>
+
+          <!-- Contact ME Shortcut -->
+          <div class="icon-container">
+            <img
+              src="/images/contactIcon.png"
+              alt="Contact Icon"
+              id="info-iconContact"
+              class="icon"
+            />
+            <span class="icon-text blackText">Contact</span>
+            <span class="tooltip">Opens Contact Page</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hardware window contents -->
+      <div id="info-window-hardware" class="info-window">
+        <div class="window-header" id="hrdwr-header">Hardware Projects: SYNTHESIZER & PCB DESIGN</div>
+        <span class="close-btn">&times;</span>
+        <div class="window-body">
+          <img width="50%" src="images/StringSynthCutOut.png" alt="DIY String Synth with Analog Filter"  id="synth-image" class="image">
+          <p>
+            As well as software development I also like to
+            combine hardware with software. This mostly takes the form in
+            creating and designing synthesisers (electronic musical instruments).
+          </p>
+          <p>
+              The majority of these instruments are built using C++, the Mozzi audio
+              library, low cost Arduino development boards, and analog electronic
+              circuits.
+
+          </p>
+          <p>
+            The designs of which I make open source (available via my blog and
+            GitHub) and also publish instructions of how to make them for
+            beginners.
+          </p>
+          <p>
+            If I make a small run of units, I'll often create PCBs
+            using the Kicad software.
+          </p>
+          <p>
+            You can see a video example of the string synth here
+          </p>
+            
+        
+          <p class="subHeading">HELIOS ONE SYNTH</p>
+          <p>An Easy To Build Mono Synth</p>
+          <p>
+            I wanted to design an instrument that was easy to build, cheap to
+            make, and also fully playable and expressive. The result was the
+            Helios Mk One synth, which is possible to build for around $20.
+            Contructed using an Arduino Nano (programmed using C++) and the Mozzi
+            audio library, you can build a simple MIDI controlled mono synth with
+            a Filter, LFO and ADSR.
+            <br /><br />
+            The code is open source, and a fully illustrated build guide is
+            available. Many people have gone on to build this synth as their
+            introduction to synth DIY after it was posted in Hackaday. Some have
+            gone on to modify the code and add extra functions.<br /><br />
+            You can watch some video examples of the synth here and read about the
+            code and build process here.
+          </p>
+          <p class="subHeading">ARDUINO SAMPLING DRUM PAD</p>
+          <p>Arduino Drum Pad With Build Guide</p>
+          <p>
+            These drum pads allow you to upload your own audio samples and then
+            trigger them using the drum pads. One potentiometer allows you to
+            control the pitch of the sample, while the other control the volume.
+            The switch allows you to choose between 2 samples (more is not
+            possible due to the tiny memory size of the hardware). The drums were
+            built using the Mozzi audio library and an Arduino nano.<br /><br />
+            You can see a video example of the drum pads in action here. Or read
+            the full construction guide here.
+          </p>
+          <p class="subHeading">SLEEP MEDITATION MACHINE</p>
+          <p>Dodow Clone</p>
+          <p>
+            With this machine you sync your breathing to the pulse of the LEDs,
+            which gradually slow down over either a user selectable 15 or 30
+            minute runtime. At the end of the cycle, hopefully you'll be relaxed
+            enough to fall asleep.<br /><br />
+            Instructions for this build were published to Intructables where it
+            was entered for their Arduino Contest 2017.
+          </p>
+        </div>
+      </div>
+
+      <!-- Webdev window contents -->
+      <div id="info-window-webdev" class="info-window">
+        <div class="window-header" id="webdv-header">Web Dev Projects</div>
+        <span class="close-btn">&times;</span>
+        <div class="window-body">
+          <p>Web Dev Projects</p>
+          <p class="subHeading">Overview</p>
+          <p>list of web dev projects:</p>
+          <p></p>
+          <p class="subHeading">Doom Armour Calculator</p>
+          <p>
+            For one of my VR projects I needed an efficient way to calculate the
+            amount of hit points removed from both your health total, and if you
+            have any, your armour total. Points should be removed from the armour
+            amount first, and then the health. So if you have 100 health, 20
+            Armour, and a hit point is worth 30, you should be left with 90 health
+            and 0 armour. <br /><br />
+            The page is responsive & was created using pure HTML, CSS &
+            JavaScript. You can try it our here. <br /><br />
+            You can see the full code over on GitHub.
+          </p>
+          <br />
+          <p class="subHeading">Weather App</p>
+          <p>API Connected weather App</p>
+          <p>
+            Here we are grabbing the weather results from the user selected area
+            and as well as returning the weather, we're also offering advice on
+            the appropriate atire (which changes depending on the
+            tempturature).<br /><br />
+            We're making use of the openweathermap.org API to return these
+            results.<br /><br />
+            You can see the full code over on GitHub.
+          </p>
+          <br />
+          <p class="subHeading">Audiogram</p>
+          <p>Audio Recording Social Media App</p>
+          <p>
+            The audio-sharing social-network. The user is limited to 10 seconds
+            recording time and doesn't have the ability to delete their messages.
+            Features secure log-in and the option to post on other users
+            recordings.<br /><br />
+            This was our final project as part of the Ironhack Berlin Web Dev
+            course. It was built using the following;<br /><br />
+            React, Node.js, Express.js, MongoDB, Bootstrap, HTML & CSS<br /><br />
+            You can see the full code over on GitHub.
+          </p>
+          <br />
+          <p class="subHeading">Pets Of Berlin App</p>
+          <p>Location Based Pet Breeding App</p>
+          <p>
+            Help your guinea pig to find new friends and breeding partners. This
+            website was built as our second project for the Ironhack Berlin web
+            development bootcamp.<br /><br />
+            Create a secure account and then tag your location and let other users
+            see your animals details.<br /><br />
+            It primarily uses the Google Maps API and was built using Node.js,
+            Express.js, Handlebars, MongoDB, jQuery, Bootstrap, HTML & CSS<br /><br />
+            You can see the full code over on GitHub.
+          </p>
+          <p class="subHeading">To Do List</p>
+          <p>Angular TODO List App</p>
+          <p>
+            This is a classic 'TODO' list app that was created using Angular and
+            using the JSON placeholder API to gather the TODOs.<br /><br />
+            You can see the full code over on GitHub
+          </p>
+          <p class="subHeading">Brexit Game</p>
+          <p>Phaser Fun</p>
+          <p>
+            The game you can't win! Designed to be overly-complicated, you need to
+            decide if the anti-EU headline is true or false by collecting a 'yes'
+            or 'no' tick, all the while balancing public anger and gullibility by
+            collecting pints of beer. Every correct guess spawns an English flag
+            which if you accidentally collect will end the game ("Avoid
+            Nationalism!").<br /><br />
+            This game was created using the Phaser library and Javascript for the
+            first project of Ironhack Berlin.<br /><br />
+            You can see the code over on GitHub
+          </p>
+        </div>
+      </div>
+
+      <!-- VR window contents -->
+      <div id="info-window-vr" class="info-window">
+        <div class="window-header" id="vr-header">VR Works</div>
+        <span class="close-btn">&times;</span>
+        <div class="window-body">
+          <p>VR INFO</p>
+          <p>
+            VR VR VRcVR VRVR VRVRVRRVRV VR VR VRcVR VRVR VRVRVRRVRVVR VR VRcVR
+            VRVR VRVRVRRVRVVR VR VRcVR VRVR VRVRVRRVRVVR VR VRcVR VRVR VRVRVRRVRV
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+            sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
+            rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
+            ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
+            sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+            dolore
+          </p>
+        </div>
+      </div>
+
+      <!-- AboutME window contents -->
+      <div id="info-window-aboutMe" class="info-window">
+        <div class="window-header" id="aboutMe-header">About Me</div>
+        <span class="close-btn">&times;</span>
+        <div class="window-body">
+          <img
+            src="images/GHck5.jpg"
+            alt="The big man"
+            id="image"
+            class="imageAboutMe"
+          />
+          <img
+          src="images/DigitalSunsetLogo.png"
+          alt="logo"
+          class="imageGif"
+        />
+          <p>
+            Hi, I'm Gary! Digital Sunset Studios is the name I work under for my
+            various software projects. Here you'll find infomation and links to my
+            Virtual Reality projects, hardware projects and Web Development
+            projects.
+          </p>
+          <p>
+            In 2013 I first started playing with electronics, then after winning a
+            Google programming scholarship I started to combine this with software
+            programming.
+          </p>
+          <p>
+            After taking an intensive 9-week Web Dev bootcamp in 2019, I have been
+            working as a full-time web developer. But at night, I put on my VR
+            goggles and work on my various VR projects. I also like to create and
+            program hardware synthesizers for fun.
+          </p>
+          <p>I currently live in Leipzig, Germany.</p>
+          <img
+            src="images/VR_Comp.gif"
+            alt="compilation of software gif"
+            class="imageGif"
+          />
+          <br /><br />
+          <a
+            href="https://bloghoskins.blogspot.com/"
+            style="text-decoration: none"
+            class="blueText centerText"
+            target="_blank"
+            >Selected Quotes From My Blog:</a
+          ><br />
+          <!-- blog intro linkl -->
+          <!-- blog text carousel -->
+          <div class="fade-container">
+            <p id="sentence">Sentence 1</p>
+          </div>
+          <!-- blog text carousel -->
+          <p class="subHeading">Education</p>
+          
+          <br />
+
+          <!-- big Table of School -->
+          <table class="centerEdu">
+            <tr>
+              <th class="paddingEdu">Year</th>
+              <th>School</th>
+              <th>Course</th>
+            </tr>
+            <tr>
+              <td>2023</td>
+              <td class="leftEdu paddingEdu">XR Terra</td>
+              <td class="leftEdu paddingEdu">
+                4-week XR Foundations Developer (VR)
+              </td>
+            </tr>
+            <tr>
+              <td>2019</td>
+              <td class="leftEdu paddingEdu">Ironhack, Berlin</td>
+              <td class="leftEdu paddingEdu">9-week Web Development Bootcamp</td>
+            </tr>
+            <tr>
+              <td>2017</td>
+              <td class="leftEdu paddingEdu">Udacity</td>
+              <td class="leftEdu paddingEdu">
+                Android Development, Scholarship funded by Google
+              </td>
+            </tr>
+            <tr>
+              <td>2013/4</td>
+              <td class="leftEdu paddingEdu">
+                International Correspondence Schools
+              </td>
+              <td class="leftEdu paddingEdu">
+                Bachelor of Technology (BTECH Level 3) Electronic Engineering
+              </td>
+            </tr>
+            <tr>
+              <td>2009</td>
+              <td class="leftEdu paddingEdu">BSI Language School Berlin</td>
+              <td class="leftEdu paddingEdu">
+                Intensive Language Course (German)
+              </td>
+            </tr>
+            <tr>
+              <td>2007</td>
+              <td class="leftEdu paddingEdu">St. Martin's College, London</td>
+              <td class="leftEdu paddingEdu">
+                Introduction To Maya (Short Course)
+              </td>
+            </tr>
+            <tr>
+              <td>98/2001</td>
+              <td class="leftEdu paddingEdu">
+                Amersham & Wycombe College, Bucks
+              </td>
+              <td class="leftEdu paddingEdu">
+                Bachelor of Technology (BTECH) Sound Engineeering with Music
+                Technology (GNVQ)
+              </td>
+            </tr>
+            <tr>
+              <td>1997/8</td>
+              <td class="leftEdu paddingEdu">
+                Amersham & Wycombe College, Bucks
+              </td>
+              <td class="leftEdu paddingEdu">GNVQ in Art and Design</td>
+            </tr>
+          </table>
+          <!-- blog text carousel -->
+          <p class="subHeading">Software</p>
+          <p>Here's some of the software I use to develop with:</p>
+          <ul>
+            <li>
+              <b>VR:</b> Unity, C#, Visual Studio, Blender, Meta Quest Dev Hub.
+              Unity Assets: Probuilder, Bakery GPU Lightmapper, VR Interaction
+              Framework + more
+            </li>
+            <br />
+            <li>
+              <b>Hardware:</b> Arduino IDE, C++, kiCad (PCB Design Software),
+              Mozzi Audio Library, FortySevenEffects MIDI Library, Analog/Digital
+              circuits
+            </li>
+            <br />
+            <li>
+              <b>Webdesign:</b> Javascript, HTML 5, CSS3, React (working
+              knowledge), Node.js, Express.js, MongoDB, Bootstrap, POSTman,
+              Github/Command Line, API's, Visual Studio Code
+            </li>
+            <br />
+            <li>
+              <b>Design/Creation:</b> Affinity Designer, Affinity Photo, Affinity
+              Publisher, Photoshop, After Effects, Adobe XD, Audacity, FL Studio,
+              Vegas Movie Studio
+            </li>
+          </ul>
+          <!-- blog text carousel -->
+          <p class="subHeading">Qualifications</p>
+        
+          <!-- Container (About Section) -->
+          <table class="centerCourses">
+            <tr>
+              <th>Date</th>
+              <th>Course Name</th>
+              <th>Provider</th>
+            </tr>
+            <tr>
+              <td>June 2023</td>
+              <td>Augmented Reality 101</td>
+              <td>Zenva Academy</td>
+            </tr>
+            <tr>
+              <td>June 2023</td>
+              <td>Intro to Particle Systems for Games</td>
+              <td>Zenva Academy</td>
+            </tr>
+            <tr>
+              <td>March 2023</td>
+              <td>XR Foundations Developer</td>
+              <td>XR Terra</td>
+            </tr>
+            <tr>
+              <td>February 2023</td>
+              <td>Discover the XR Interaction Toolkit for VR</td>
+              <td>Zenva Academy</td>
+            </tr>
+            <tr>
+              <td>January 2023</td>
+              <td>The Complete 2023 Web Dev Bootcamp</td>
+              <td>Udemy</td>
+            </tr>
+            <tr>
+              <td>January 2023</td>
+              <td>Create Your First 3D Game in Unity</td>
+              <td>Zenva Academy</td>
+            </tr>
+            <tr>
+              <td>January 2023</td>
+              <td>Mobile Game Development for Beginners</td>
+              <td>Zenva Academy</td>
+            </tr>
+            <tr>
+              <td>January 2023</td>
+              <td>Learn the Entire Affinity Suite: Photo, Designer & Publisher</td>
+              <td>Udemy</td>
+            </tr>
+            <tr>
+              <td>January 2023</td>
+              <td>Unity Mini-Projects - C# Fundamentals</td>
+              <td>Zenva Academy</td>
+            </tr>
+            <tr>
+              <td>Sept 2022</td>
+              <td>Data Privacy Training Basic</td>
+              <td>Proliance</td>
+            </tr>
+            <tr>
+              <td>August 2021</td>
+              <td>Build The Game Of Life</td>
+              <td>Udemy</td>
+            </tr>
+            <tr>
+              <td>July 2021</td>
+              <td>Complete SEO Training 2021</td>
+              <td>Udemy</td>
+            </tr>
+            <tr>
+              <td>June 2021</td>
+              <td>Generative Music Box Project</td>
+              <td>Udemy</td>
+            </tr>
+            <tr>
+              <td>May 2021</td>
+              <td>Building Your First VR Experience With Unity</td>
+              <td>Udemy</td>
+            </tr>
+            <tr>
+              <td>Sept 2019</td>
+              <td>XD/DC - Adobe XD Workshop Tour</td>
+              <td>XD/DC</td>
+            </tr>
+            <tr>
+              <td>August 2019</td>
+              <td>SEO Training</td>
+              <td>Udemy</td>
+            </tr>
+            <tr>
+              <td>May 2019</td>
+              <td>Ironhack 9-Week Web Development Bootcamp</td>
+              <td>Ironhack</td>
+            </tr>
+            <tr>
+              <td>August 2019</td>
+              <td>Angular Front To Back</td>
+              <td>Udemy</td>
+            </tr>
+            <tr>
+              <td>July 2019</td>
+              <td>UX, UI and Design Thinking</td>
+              <td>Udemy</td>
+            </tr>
+            <tr>
+              <td>July 2017</td>
+              <td>Android Basics Nanodegree by Google</td>
+              <td>Udemy</td>
+            </tr>
+            <tr>
+              <td>March 2016</td>
+              <td>AlgebraX: Introduction to Algebra</td>
+              <td>EdX</td>
+            </tr>
+            <tr>
+              <td>November 2015</td>
+              <td>EE40LX: Electronic Interfaces: Bridging the Physical and Digital Worlds</td>
+              <td>EdX Berkeley</td>
+            </tr>
+          </table>
+          <br>
+          </div>
+        </div>
+      </div>
+
+      <!-- Resume window contents -->
+      <div id="info-window-resume" class="info-window">
+        <div class="window-header" id="resume-header">Resume</div>
+        <span class="close-btn">&times;</span>
+        <div class="window-body">
+          <p>Resume</p>
+          <p>
+            Resume Resume Resume Resume Resume Resume Resume Resume Resume Resume
+            Resume Resume Resume Resume Resume Resume Resume Resume Resume Resume
+            Resume Resume Resume Resume Resume Resume Resume Resume Resume Resume
+            Resume Resume Resume Resume Resume Resume Resume Resume Resume Resume
+            Resume Resume Resume Resume Resume Resume Resume Resume Resume Resume
+          </p>
+        </div>
+      </div>
+
+      <!-- Contact window contents -->
+      <div id="info-window-contact" class="info-window contactWindow">
+        <div class="window-header" id="contact-header">Contact Me</div>
+        <span class="close-btn">&times;</span>
+        <div class="window-body">
+          <h3>Get In Touch...</h3>
+          <p>
+            Contact me via
+            <a
+              href="https://www.linkedin.com/in/gary-white-3a779a51/"
+              target="_blank"
+              >LinkedIn</a
+            >.
+          </p>
+          <br /><br /><br />
+          <iframe
+            src="https://giphy.com/embed/YmjleYhDTUiYw"
+            width="100"
+            height="100"
+            frameborder="0"
+            class="giphy-embed"
+            allowfullscreen
+          ></iframe>
+          <p>
+            <a href="https://giphy.com/gifs/email-YmjleYhDTUiYw"></a>
+          </p>
+        </div>
+      </div>
     </div>
 
     <script src="scripts.js"></script>
