@@ -1,0 +1,137 @@
+body {
+  background-color: black;
+  color: #33ff33;
+  font-family: "Menlo", "DejaVu Sans Mono", Consolas, "Lucida Console",
+    monospace;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: left;
+  align-items: flex-start;
+  overflow: hidden;
+}
+
+.terminal {
+  position: relative;
+  width: 100%;
+  height: 60%;
+  max-width: 800px;
+  background: #000;
+  padding: 20px;
+  /* border: 3px solid #33ff33; */
+  /* box-shadow: 0px 0px 15px #33ff33; */
+  overflow: hidden;
+}
+
+.line {
+  opacity: 0;
+  display: block;
+  line-height: 0; /* Adjusted line height */
+}
+
+#cursor {
+  display: inline-block;
+  width: 10px;
+  height: 18px; /* Adjusted cursor height */
+  background-color: #33ff33;
+  position: absolute;
+  animation: blink 1s steps(2) infinite;
+  top: 0; /* Reset to ensure it's at the correct height */
+  left: 0; /* Start from the left */
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/****************************SPLASH SCREEN**********************************
+  
+  /* Splash Screen Styling */
+/* #splash {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff; /* Background color during splash */
+/* display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; Ensure it's on top of all other elements */
+/* transition: opacity 0.5s; For fade-out effect */
+/* } */
+
+/* Optional: Make the splash image responsive */
+/* #splash img {
+  max-width: 100%;
+  max-height: 100%;
+} */
+
+/* Main Content Styling */
+/* #main-content {
+  padding: 20px; */
+/* Add any additional styling for your main content here */
+/* } */
+
+/* styles.css */
+
+/* Reset margins and paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Ensure the body takes up the full height */
+html,
+body {
+  height: 100%;
+}
+
+/* Common Splash Screen Styling */
+.splash {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff; /* Background color during splash */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* Ensure it's on top of all other elements */
+  /* transition: opacity 0.5s ease; For fade-out effect */
+}
+
+.splash2 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 70%;
+  height: 100%;
+  background-color: black; /* Background color during splash */
+  display: flex;
+  justify-content: flex-start; /* Align content to the left */
+  align-items: flex-start; /* Align content to the top */
+  z-index: 9999; /* Ensure it's on top of all other elements */
+  /* transition: opacity 0.5s ease; For fade-out effect */
+}
+
+/* Optional: Make the splash images responsive */
+.splash img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* Main Content Styling */
+#main-content {
+  padding: 20px;
+  /* display: none; Hidden by default */
+  /* Add any additional styling for your main content here */
+}
