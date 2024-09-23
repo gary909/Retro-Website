@@ -3,8 +3,8 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Duration for each splash screen in milliseconds
   // const SPLASH_DURATION = 500; // 0.5 seconds per splash screen
-  const SPLASH1_DURATION = 600; // 0.7 seconds for first splash
-  const SPLASH2_DURATION = 1500; // 0.5 seconds for second splash
+  const SPLASH1_DURATION = 600; // 600 0.7 seconds for first splash
+  const SPLASH2_DURATION = 1500; // 1500 0.5 seconds for second splash
 
   // Get references to the splash screens and main content
   const splash1 = document.getElementById("splash1");
@@ -590,6 +590,55 @@ observer.observe(infoWindow, { attributes: true });
 // Initially hide the window
 infoWindow.style.display = "none";
 
+//*************************Hardware Image reveal****************************** */
+
+const hrdwrWindow = document.getElementById("info-window-hardware");
+const hdWrImage = document.getElementById("hdWrImage");
+const hdWrImages = [
+  "images/StringSynthCutOut3.png",
+  "images/StringSynthCutOut2.png",
+  "images/StringSynthCutOut1.png",
+  "images/StringSynthCutOut.png",
+];
+
+let hdWrIndex = 0;
+const hdWrDelay = 500; // Adjust the delay in milliseconds as needed
+
+function hdWrtransitionImage() {
+  if (hdWrIndex < hdWrImages.length) {
+    hdWrImage.src = hdWrImages[hdWrIndex];
+    hdWrIndex++;
+    setTimeout(hdWrtransitionImage, hdWrDelay);
+  }
+}
+
+// Function to trigger when the window is opened
+function hdWrhandleWindowOpen() {
+  if (hrdwrWindow.style.display !== "none") {
+    // Reset index and start image transition
+    hdWrIndex = 0;
+    setTimeout(hdWrtransitionImage, hdWrDelay);
+  }
+}
+
+// Observe changes in the display style of the window
+const hdWrObserver = new MutationObserver((mutations) => {
+  mutations.forEach((mutation) => {
+    if (
+      mutation.attributeName === "style" &&
+      hrdwrWindow.style.display === "block"
+    ) {
+      hdWrhandleWindowOpen();
+    }
+  });
+});
+
+// Start observing the info window for style changes
+hdWrObserver.observe(hrdwrWindow, { attributes: true });
+
+// Initially hide the window
+hrdwrWindow.style.display = "none";
+
 //********************Blog Text Carousel***************************/
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -629,19 +678,19 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 //********************Collapsible Certs***************************/
-document.addEventListener("DOMContentLoaded", function () {
-  const collapsibles = document.querySelectorAll(".collapsible");
+// document.addEventListener("DOMContentLoaded", function () {
+//   const collapsibles = document.querySelectorAll(".collapsible");
 
-  collapsibles.forEach((button) => {
-    button.addEventListener("click", function () {
-      this.classList.toggle("active");
+//   collapsibles.forEach((button) => {
+//     button.addEventListener("click", function () {
+//       this.classList.toggle("active");
 
-      const content = this.nextElementSibling;
-      if (content.style.display === "block") {
-        content.style.display = "none";
-      } else {
-        content.style.display = "block";
-      }
-    });
-  });
-});
+//       const content = this.nextElementSibling;
+//       if (content.style.display === "block") {
+//         content.style.display = "none";
+//       } else {
+//         content.style.display = "block";
+//       }
+//     });
+//   });
+// });

@@ -513,12 +513,22 @@ body {
   width: 30%;
 }
 
+/********************Pixelated Image***************************/
+.imageHdWr {
+  width: 50%;
+}
+
 /********************Gif Image Size***************************/
 .imageGif {
   width: 50%;
 }
 
 /********************About Me Page Image***************************/
+
+.resumeWindow {
+  width: 360px;
+  height: 380px;
+}
 
 /********************Contact Window***************************/
 
