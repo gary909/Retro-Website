@@ -518,11 +518,24 @@ body {
   width: 50%;
 }
 
+/********************About Me Page Image***************************/
+
 /********************Contact Window***************************/
 
 .contactWindow {
   width: 225px;
   height: 320px;
+}
+
+.contactImage {
+  display: block;
+  position: absolute;
+  right: 30%;
+  width: 100px;
+}
+
+.contactMeText {
+  line-height: 35px;
 }
 
 /********************Blog Text Carousel***************************/
