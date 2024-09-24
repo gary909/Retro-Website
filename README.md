@@ -1,5 +1,9 @@
 "# Retro-Website" 
 
+Added minesweeper game:
+
+![minesweeperGIF](https://github.com/user-attachments/assets/aa7ba41e-ebec-4077-a316-43cfcd7d1bf2)
+
 contact styling:
 
 ![contactGif-ezgif com-optimize](https://github.com/user-attachments/assets/f6d02911-1cd1-4515-ab5e-1f35b4fbc6d4)
