@@ -198,6 +198,19 @@
         <!-- Tooltip text -->
       </div>
 
+      <!-- Minesweeper Icon -->
+      <div class="icon-container">
+        <img
+          src="/images/MsIcon.png"
+          alt="Minesweeper Icon"
+          id="info-iconMS"
+          class="icon"
+        />
+        <span class="icon-text">Game</span>
+        <span class="tooltip">Play a game!</span>
+        <!-- Tooltip text -->
+      </div>
+
       <!-- Draggable Windows -->
 
       <!-- Info window contents (including more icons) -->
@@ -554,6 +567,17 @@
           <p>Built using the Corgi Engine within Unity, I was quickly able to create a functional 
             prototype complete with paralax backgrounds and enemies.
           </p>
+        </div>
+      </div>
+
+
+      <!-- Minesweeper window contents -->
+      <div id="info-window-ms" class="info-window msWindow">
+        <div class="window-header" id="ms-header">Minesweeper</div>
+        <span class="close-btn">&times;</span>
+        <div class="window-body bodyMS">
+          <div id="minesweeper"></div>
+          <button id="resetButton">Reset Game</button>
         </div>
       </div>
 
