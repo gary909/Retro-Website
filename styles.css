@@ -676,19 +676,19 @@ td {
 }
 
 .msWindow {
-  width: 480px;
-  height: 560px;
+  width: 280px;
+  height: 380px;
 }
 
 #minesweeper {
   display: grid;
-  grid-template-columns: repeat(10, 40px);
-  gap: 2px;
+  grid-template-columns: repeat(10, 25px);
+  gap: 0px;
   justify-content: center;
-  margin-top: 15px;
+  margin-top: 0px;
 }
 
-.cell {
+/* .cell {
   width: 40px;
   height: 40px;
   background-color: lightgray;
@@ -704,6 +704,26 @@ td {
 
 .cell.revealed {
   background-color: #ddd;
+  cursor: default;
+} */
+
+.cell {
+  width: 25px;
+  height: 25px;
+  background-color: #c0c0c0;
+  border: 2px outset #fff;
+  box-shadow: inset -2px -2px 0 #808080, inset 2px 2px 0 #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.cell.revealed {
+  background-color: #bfbfbf;
+  border: 2px inset #808080;
+  box-shadow: none;
   cursor: default;
 }
 
