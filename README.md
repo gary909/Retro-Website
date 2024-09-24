@@ -1,5 +1,9 @@
 "# Retro-Website" 
 
+Added Navbar Icon
+
+![image](https://github.com/user-attachments/assets/34400ee1-4494-481f-a8d1-61f35b15980a)
+
 Changed minesweeper styling:
 
 ![msImg](https://github.com/user-attachments/assets/532fbb34-b0ea-474f-b9ef-749f92cf1216)
