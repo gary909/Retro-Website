@@ -3,8 +3,8 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Duration for each splash screen in milliseconds
   // const SPLASH_DURATION = 500; // 0.5 seconds per splash screen
-  const SPLASH1_DURATION = 40; // 600 0.7 seconds for first splash
-  const SPLASH2_DURATION = 40; // 1500 0.5 seconds for second splash
+  const SPLASH1_DURATION = 600; // 600 0.7 seconds for first splash
+  const SPLASH2_DURATION = 1500; // 1500 0.5 seconds for second splash
 
   // Get references to the splash screens and main content
   const splash1 = document.getElementById("splash1");
@@ -870,3 +870,13 @@ function endGame(win) {
 }
 
 createGrid();
+
+//*************** */ Delay the background image by 3 seconds********************
+setTimeout(function () {
+  document.body.style.backgroundImage = "url('images/DigitalSunsetLogo.png')";
+}, 2900); // 3000 milliseconds = 3 seconds
+
+//*************** */ Delay the background Colour by 2 seconds********************
+setTimeout(function () {
+  document.body.style.backgroundColor = "#004f9f";
+}, 2000); // 2000 milliseconds = 2 seconds
