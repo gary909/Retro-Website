@@ -1,5 +1,9 @@
 "# Retro-Website" 
 
+Improved load screen:
+
+![loadScreen](https://github.com/user-attachments/assets/b095f49e-1ad0-49f0-99b3-9aab07600011)
+
 Added Navbar Icon
 
 ![image](https://github.com/user-attachments/assets/34400ee1-4494-481f-a8d1-61f35b15980a)
