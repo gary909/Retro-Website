@@ -237,6 +237,17 @@ body {
   color: #ff8800;
 }
 
+/***************************Nav Icon Styling*******************************/
+
+.nav-logo {
+  width: 16px; /* Change this value to adjust the width */
+  height: 16px; /* Change this value to adjust the height */
+  margin-right: 0px; /* Adjust space between logo and nav items */
+  margin-left: 20px;
+  margin-top: 2px; /* Move the image down by 2 pixels */
+  vertical-align: middle; /* Vertically align the logo with the text */
+}
+
 /***************************ICONS BELOW*******************************/
 
 .icon-container {
