@@ -688,25 +688,6 @@ td {
   margin-top: 0px;
 }
 
-/* .cell {
-  width: 40px;
-  height: 40px;
-  background-color: lightgray;
-  border: 1px solid #999;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  font-size: 20px;
-  font-weight: bold;
-  user-select: none;
-}
-
-.cell.revealed {
-  background-color: #ddd;
-  cursor: default;
-} */
-
 .cell {
   width: 25px;
   height: 25px;

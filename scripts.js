@@ -199,6 +199,8 @@ function closeWindow(element) {
   }, 200); // Match the transition duration (200ms)
 }
 
+//************************Make Icons Clickable******************************* */
+
 document.getElementById("info-icon").addEventListener("dblclick", function () {
   toggleWindow(document.getElementById("info-window"));
 });
@@ -267,6 +269,73 @@ document.querySelectorAll(".close-btn").forEach((btn) => {
   btn.addEventListener("click", function () {
     closeWindow(this.parentElement);
   });
+});
+
+//************************Make Icon text Clickable******************************* */
+
+// main About (desktop) text clickable
+document.getElementById("about-text").addEventListener("dblclick", function () {
+  toggleWindow(document.getElementById("info-window"));
+});
+
+// AboutMe (windowed) text clickable
+document
+  .getElementById("aboutMe-text")
+  .addEventListener("dblclick", function () {
+    toggleWindow(document.getElementById("info-window-aboutMe"));
+  });
+
+// Resume (windowed) text clickable
+document
+  .getElementById("resume-text")
+  .addEventListener("dblclick", function () {
+    toggleWindow(document.getElementById("info-window-resume"));
+  });
+
+// contact icon (windowed) text clickable
+document
+  .getElementById("contact-text")
+  .addEventListener("dblclick", function () {
+    toggleWindow(document.getElementById("info-window-contact"));
+  });
+
+// hardware icon text clickable
+document.getElementById("hdwr-text").addEventListener("dblclick", function () {
+  toggleWindow(document.getElementById("info-window-hardware"));
+});
+
+// webdev icon text clickable
+document
+  .getElementById("webdev-text")
+  .addEventListener("dblclick", function () {
+    toggleWindow(document.getElementById("info-window-webdev"));
+  });
+
+// vr icon text clickable
+document.getElementById("vr-text").addEventListener("dblclick", function () {
+  toggleWindow(document.getElementById("info-window-vr"));
+});
+
+// blog icon text clickable
+document.getElementById("blog-text").addEventListener("dblclick", function () {
+  window.open("https://bloghoskins.blogspot.com/", "_blank"); // Opens BLOG in a new tab
+});
+
+// Github icon text clickable
+document
+  .getElementById("github-text")
+  .addEventListener("dblclick", function () {
+    window.open("https://github.com/gary909", "_blank"); // Opens GITHUB in a new tab
+  });
+
+// LinkedIn icon text clickable
+document.getElementById("lkdIn-text").addEventListener("dblclick", function () {
+  window.open("https://www.linkedin.com/in/gary-white-3a779a51/", "_blank"); // Opens LINKEDIN in a new tab
+});
+
+// Minesweeper icon text clickable
+document.getElementById("ms-text").addEventListener("dblclick", function () {
+  toggleWindow(document.getElementById("info-window-ms"));
 });
 
 //*************************Make nav bar open upon click****************************** */
