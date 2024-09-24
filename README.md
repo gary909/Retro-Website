@@ -1,5 +1,9 @@
 "# Retro-Website" 
 
+Changed minesweeper styling:
+
+![msImg](https://github.com/user-attachments/assets/532fbb34-b0ea-474f-b9ef-749f92cf1216)
+
 Added minesweeper game:
 
 ![minesweeperGIF](https://github.com/user-attachments/assets/aa7ba41e-ebec-4077-a316-43cfcd7d1bf2)
