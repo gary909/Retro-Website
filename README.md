@@ -1,5 +1,9 @@
 "# Retro-Website" 
 
+Windows now resizable
+
+![resizeOptimize](https://github.com/user-attachments/assets/98f47c17-f208-4573-9ff7-e535988caa8a)
+
 Added Nedry permission denied popup
 
 ![nedryExmple](https://github.com/user-attachments/assets/e6d59c31-27f0-4e1a-86e9-6578534e4b1c)
