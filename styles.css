@@ -573,7 +573,7 @@ body {
   width: 50%;
 }
 
-/********************Pixelated Image***************************/
+/********************Webdev Image and window***************************/
 .imageWebDev {
   /* width: 50%; */
   float: left; /* Float the image to the left */
@@ -590,6 +590,35 @@ body {
   margin-bottom: 5px; /* Add space at the bottom to clear the image */
   max-width: 50%; /* Set a percentage width to keep the image responsive */
   height: auto; /* Maintain aspect ratio */
+}
+
+.info-window-webdev {
+  width: 650px;
+  height: 450px;
+}
+
+/********************VR Image and window***************************/
+.imageVR {
+  /* width: 50%; */
+  float: left; /* Float the image to the left */
+  margin-right: 15px; /* Add space between the image and the text */
+  margin-bottom: 5px; /* Add space at the bottom to clear the image */
+  max-width: 50%; /* Set a percentage width to keep the image responsive */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.imageVRsml {
+  /* width: 50%; */
+  float: left; /* Float the image to the left */
+  margin-right: 15px; /* Add space between the image and the text */
+  margin-bottom: 5px; /* Add space at the bottom to clear the image */
+  max-width: 35%; /* Set a percentage width to keep the image responsive */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.info-window-vr {
+  width: 680px;
+  height: 425px;
 }
 
 /********************Gif Image Size***************************/
