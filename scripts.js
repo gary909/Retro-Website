@@ -143,7 +143,7 @@ function getNextZIndex() {
   return highestZIndex + 1;
 }
 
-// Apply draggable functionality
+// Apply draggable functionality -----------------------Not needed??
 makeDraggable(
   document.getElementById("info-window"),
   document.getElementById("info-header")
@@ -179,6 +179,11 @@ makeDraggable(
 makeDraggable(
   document.getElementById("info-window-trash"),
   document.getElementById("trash-header")
+);
+
+makeDraggable(
+  document.getElementById("info-window-emptyTrash"),
+  document.getElementById("emptyTrash-header")
 );
 
 //************************shrink open/close window anim******************************* */
@@ -293,6 +298,12 @@ document
     toggleWindow(document.getElementById("info-window-trash"));
   });
 
+document
+  .getElementById("info-iconEmptyTrash")
+  .addEventListener("dblclick", function () {
+    toggleWindow(document.getElementById("info-window-emptyTrash"));
+  });
+
 document.querySelectorAll(".close-btn").forEach((btn) => {
   btn.addEventListener("click", function () {
     closeWindow(this.parentElement);
@@ -378,6 +389,13 @@ document.getElementById("ms-text").addEventListener("dblclick", function () {
 document.getElementById("trash-text").addEventListener("dblclick", function () {
   toggleWindow(document.getElementById("info-window-trash"));
 });
+
+// Empty Trash icon text clickable
+document
+  .getElementById("emptyTrash-text")
+  .addEventListener("dblclick", function () {
+    toggleWindow(document.getElementById("info-window-emptyTrash"));
+  });
 
 //*************************Make nav bar open upon click****************************** */
 

@@ -574,8 +574,19 @@ body {
 /********************Trash Window***************************/
 
 .trashWindow {
-  width: 320px;
-  height: 220px;
+  width: 300px;
+  height: 230px;
+}
+
+/********************Empty Trash Window***************************/
+
+.emptyTrashWindow {
+  width: 340px;
+  height: 330px;
+}
+
+.emptyTrashImage {
+  width: 300px;
 }
 
 /********************Blog Text Carousel***************************/
