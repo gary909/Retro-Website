@@ -311,6 +311,8 @@ body {
   z-index: 1000;
   transition: transform 0.2s ease, opacity 0.2s ease;
   opacity: 0;
+  resize: both; /* Allows resizing both horizontally and vertically */
+  overflow: auto; /* Ensures content can be scrolled if the window is resized smaller than its content */
   /* overflow: auto; */
 }
 
@@ -527,11 +529,30 @@ body {
 
 /********************Pixelated Image***************************/
 .imageAboutMe {
-  width: 30%;
+  /* width: 30%; */
+  float: left; /* Float the image to the left */
+  margin-right: 15px; /* Add space between the image and the text */
+  margin-bottom: 5px; /* Add space at the bottom to clear the image */
+  max-width: 40%; /* Set a percentage width to keep the image responsive */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/********************Window Text Alignment***************************/
+.window-body p {
+  text-align: justify; /* Optional: Adjusts the text alignment to make it look neat */
 }
 
 /********************Pixelated Image***************************/
 .imageHdWr {
+  /* width: 50%; */
+  float: left; /* Float the image to the left */
+  margin-right: 15px; /* Add space between the image and the text */
+  margin-bottom: 15px; /* Add space at the bottom to clear the image */
+  max-width: 40%; /* Set a percentage width to keep the image responsive */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.imageHdWr2 {
   width: 50%;
 }
 
