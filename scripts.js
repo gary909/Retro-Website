@@ -143,7 +143,7 @@ function getNextZIndex() {
   return highestZIndex + 1;
 }
 
-// Apply draggable functionality -----------------------Not needed??
+// Apply draggable functionality
 makeDraggable(
   document.getElementById("info-window"),
   document.getElementById("info-header")
