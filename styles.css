@@ -565,12 +565,21 @@ body {
   float: left; /* Float the image to the left */
   margin-right: 15px; /* Add space between the image and the text */
   margin-bottom: 15px; /* Add space at the bottom to clear the image */
-  max-width: 40%; /* Set a percentage width to keep the image responsive */
+  max-width: 50%; /* Set a percentage width to keep the image responsive */
   height: auto; /* Maintain aspect ratio */
 }
 
 .imageHdWr2 {
   width: 50%;
+}
+
+.imageHdWr3 {
+  /* width: 50%; */
+  float: center; /* Float the image to the left */
+  margin-right: 5px; /* Add space between the image and the text */
+  margin-bottom: 15px; /* Add space at the bottom to clear the image */
+  max-width: 40%; /* Set a percentage width to keep the image responsive */
+  height: auto; /* Maintain aspect ratio */
 }
 
 /********************Webdev Image and window***************************/
@@ -580,6 +589,15 @@ body {
   margin-right: 15px; /* Add space between the image and the text */
   margin-bottom: 5px; /* Add space at the bottom to clear the image */
   max-width: 25%; /* Set a percentage width to keep the image responsive */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.imageWebDev2 {
+  /* width: 50%; */
+  float: left; /* Float the image to the left */
+  margin-right: 15px; /* Add space between the image and the text */
+  margin-bottom: 5px; /* Add space at the bottom to clear the image */
+  max-width: 50%; /* Set a percentage width to keep the image responsive */
   height: auto; /* Maintain aspect ratio */
 }
 

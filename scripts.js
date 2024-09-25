@@ -3,8 +3,8 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Duration for each splash screen in milliseconds
   // const SPLASH_DURATION = 500; // 0.5 seconds per splash screen
-  const SPLASH1_DURATION = 40; // 600 0.7 seconds for first splash
-  const SPLASH2_DURATION = 40; // 1500 0.5 seconds for second splash
+  const SPLASH1_DURATION = 600; // 600 0.7 seconds for first splash
+  const SPLASH2_DURATION = 1500; // 1500 0.5 seconds for second splash
 
   // Get references to the splash screens and main content
   const splash1 = document.getElementById("splash1");
