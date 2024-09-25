@@ -1,5 +1,9 @@
 "# Retro-Website" 
 
+Added Nedry permission denied popup
+
+![nedryExmple](https://github.com/user-attachments/assets/e6d59c31-27f0-4e1a-86e9-6578534e4b1c)
+
 Added Trash bin
 
 ![image](https://github.com/user-attachments/assets/244fb7bf-20ec-470a-a0f7-cf2fd6eba3a0)
