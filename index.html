@@ -30,7 +30,7 @@
               <span data-line="Starting MS-DOS....." class="line"></span>
               <span data-line="C:\>" class="line"></span>
               <span data-line="/////////////////////////////////////////////////" class="line"></span>
-              </pre>
+          </pre>
         <span></span>
       </div>
     </div>
@@ -209,6 +209,20 @@
         />
         <span id="ms-text" class="icon-text">Mine-Sweeper</span>
         <span class="tooltip">Play a game!</span>
+        <!-- Tooltip text -->
+      </div>
+
+      <br><br>
+      <!-- Trash Shortcut -->
+      <div class="icon-container">
+        <img
+          src="/images/trashIcon.png"
+          alt="Trash Icon"
+          id="info-iconTrash"
+          class="icon"
+        />
+        <span id="trash-text" class="icon-text">Trash</span>
+        <span class="tooltip">Opens the trash window</span>
         <!-- Tooltip text -->
       </div>
 
@@ -615,6 +629,24 @@
         <div class="window-body bodyMS">
           <div id="minesweeper"></div>
           <button id="resetButton">Reset Game</button>
+        </div>
+      </div>
+
+      <!-- Trash window contents -->
+      <div id="info-window-trash" class="info-window trashWindow">
+        <div class="window-header" id="trash-header">Trash</div>
+        <span class="close-btn">&times;</span>
+        <div class="window-body">
+          <div class="icon-container">
+            <img
+              src="/images/oldSite.png"
+              alt="View the old website..."
+              id="info-iconOldSite"
+              class="icon"
+            />
+            <span id="aboutMe-text" class="icon-text blackText">Old Site</span>
+            <span class="tooltip">Opens a new window to the old site</span>
+          </div>
         </div>
       </div>
 

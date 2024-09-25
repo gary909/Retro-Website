@@ -571,6 +571,13 @@ body {
   line-height: 35px;
 }
 
+/********************Trash Window***************************/
+
+.trashWindow {
+  width: 320px;
+  height: 220px;
+}
+
 /********************Blog Text Carousel***************************/
 
 .fade-container {

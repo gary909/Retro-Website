@@ -3,8 +3,8 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Duration for each splash screen in milliseconds
   // const SPLASH_DURATION = 500; // 0.5 seconds per splash screen
-  const SPLASH1_DURATION = 600; // 600 0.7 seconds for first splash
-  const SPLASH2_DURATION = 1500; // 1500 0.5 seconds for second splash
+  const SPLASH1_DURATION = 40; // 600 0.7 seconds for first splash
+  const SPLASH2_DURATION = 40; // 1500 0.5 seconds for second splash
 
   // Get references to the splash screens and main content
   const splash1 = document.getElementById("splash1");
@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   let lineIndex = 0;
   let charIndex = 0;
-  const typingSpeed = 5; // Speed of typing effect
+  const typingSpeed = 1; // Speed of typing effect
 
   function typeCharacter() {
     if (lineIndex < lines.length) {
@@ -176,6 +176,10 @@ makeDraggable(
   document.getElementById("info-window-ms"),
   document.getElementById("ms-header")
 );
+makeDraggable(
+  document.getElementById("info-window-trash"),
+  document.getElementById("trash-header")
+);
 
 //************************shrink open/close window anim******************************* */
 function toggleWindow(element) {
@@ -226,19 +230,37 @@ document
 document
   .getElementById("info-iconBlog")
   .addEventListener("dblclick", function () {
-    window.open("https://bloghoskins.blogspot.com/", "_blank"); // Opens BLOG in a new tab
+    window.open(
+      " https://bloghoskins.blogspot.com/",
+      "_blank",
+      "width=800,height=600"
+    ); // Opens old site in a new tab
+  });
+
+document
+  .getElementById("info-iconOldSite")
+  .addEventListener("dblclick", function () {
+    window.open(
+      "https://digitalsunsetstudios.com/index.html",
+      "_blank",
+      "width=800,height=600"
+    ); // Opens BLOG in a new tab
   });
 
 document
   .getElementById("info-iconGit")
   .addEventListener("dblclick", function () {
-    window.open("https://github.com/gary909", "_blank"); // Opens GITHUB in a new tab
+    window.open("https://github.com/gary909", "_blank", "width=800,height=600"); // Opens GITHUB in a new tab
   });
 
 document
   .getElementById("info-iconLinkIn")
   .addEventListener("dblclick", function () {
-    window.open("https://www.linkedin.com/in/gary-white-3a779a51/", "_blank"); // Opens LLINKEDIN in a new tab
+    window.open(
+      "https://www.linkedin.com/in/gary-white-3a779a51/",
+      "_blank",
+      "width=800,height=600"
+    ); // Opens LLINKEDIN in a new tab
   });
 
 document
@@ -263,6 +285,12 @@ document
   .getElementById("info-iconMS")
   .addEventListener("dblclick", function () {
     toggleWindow(document.getElementById("info-window-ms"));
+  });
+
+document
+  .getElementById("info-iconTrash")
+  .addEventListener("dblclick", function () {
+    toggleWindow(document.getElementById("info-window-trash"));
   });
 
 document.querySelectorAll(".close-btn").forEach((btn) => {
@@ -318,24 +346,37 @@ document.getElementById("vr-text").addEventListener("dblclick", function () {
 
 // blog icon text clickable
 document.getElementById("blog-text").addEventListener("dblclick", function () {
-  window.open("https://bloghoskins.blogspot.com/", "_blank"); // Opens BLOG in a new tab
+  window.open(
+    "https://bloghoskins.blogspot.com/",
+    "_blank",
+    "width=800,height=600"
+  ); // Opens BLOG in a new tab
 });
 
 // Github icon text clickable
 document
   .getElementById("github-text")
   .addEventListener("dblclick", function () {
-    window.open("https://github.com/gary909", "_blank"); // Opens GITHUB in a new tab
+    window.open("https://github.com/gary909", "_blank", "width=800,height=600"); // Opens GITHUB in a new tab
   });
 
 // LinkedIn icon text clickable
 document.getElementById("lkdIn-text").addEventListener("dblclick", function () {
-  window.open("https://www.linkedin.com/in/gary-white-3a779a51/", "_blank"); // Opens LINKEDIN in a new tab
+  window.open(
+    "https://www.linkedin.com/in/gary-white-3a779a51/",
+    "_blank",
+    "width=800,height=600"
+  ); // Opens LINKEDIN in a new tab
 });
 
 // Minesweeper icon text clickable
 document.getElementById("ms-text").addEventListener("dblclick", function () {
   toggleWindow(document.getElementById("info-window-ms"));
+});
+
+// Trash icon text clickable
+document.getElementById("trash-text").addEventListener("dblclick", function () {
+  toggleWindow(document.getElementById("info-window-trash"));
 });
 
 //*************************Make nav bar open upon click****************************** */
