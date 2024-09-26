@@ -1,5 +1,9 @@
 "# Retro-Website" 
 
+Added anoyying clippy gif:
+
+![clippyGif](https://github.com/user-attachments/assets/7b778e8c-e38b-4d28-9256-caef1a1ecca4)
+
 Windows now resizable
 
 ![resizeOptimize](https://github.com/user-attachments/assets/98f47c17-f208-4573-9ff7-e535988caa8a)
