@@ -694,7 +694,7 @@ body {
 
 /********************Trash Window***************************/
 
-.trashWindow {
+.info-window-trash {
   width: 300px;
   height: 230px;
 }
@@ -904,3 +904,11 @@ td {
 .clippy-gif.hide {
   opacity: 0; /* Make invisible */
 }
+
+/********************Hide desktop items under 600px***************************/
+/* Hide icons for screens smaller than 600px */
+/* @media (max-width: 600px) {
+  .icon-container {
+    display: none;
+  }
+} */

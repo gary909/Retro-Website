@@ -958,3 +958,94 @@ setTimeout(function () {
     clippyGif.classList.add("hide");
   }, 2000); // Keep it visible for 2 seconds
 }, 3300); // Wait 3.3 seconds before showing the GIF
+
+//****************************Make icons clickable under mobile*********************************/
+
+// Function to open a window based on device type
+function handleOpenWindow(event, element, windowId) {
+  // Check if it's a touch event (e.g., mobile device)
+  if (event.type === "touchstart" || event.type === "click") {
+    toggleWindow(element);
+  }
+}
+
+// Function to attach the event listeners for opening windows
+function addOpenWindowListener(iconId, windowId) {
+  const icon = document.getElementById(iconId);
+  const windowElement = document.getElementById(windowId);
+
+  // Add click event listener
+  icon.addEventListener("click", function (event) {
+    handleOpenWindow(event, windowElement);
+  });
+
+  // Add touchstart event listener with { passive: true }
+  icon.addEventListener(
+    "touchstart",
+    function (event) {
+      handleOpenWindow(event, windowElement);
+    },
+    { passive: true }
+  ); // This makes the event listener passive
+}
+
+// Function to open a web link based on device type
+function handleOpenLink(event, url) {
+  // Check if it's a touch or click event
+  if (event.type === "touchstart" || event.type === "click") {
+    // Open the web link in a new tab
+    window.open(url, "_blank");
+  }
+}
+
+// Function to attach event listeners to open web links
+function addLinkOpenListener(iconId, url) {
+  const icon = document.getElementById(iconId);
+
+  // Add both touchstart and click event listeners
+  icon.addEventListener("click", function (event) {
+    handleOpenLink(event, url);
+  });
+
+  // ); // This makes the event listener passive
+  icon.addEventListener(
+    "touchstart",
+    function (event) {
+      const windowElement = document.getElementById(windowId); // Define windowElement here
+      handleOpenWindow(event, windowElement, windowId);
+    },
+    { passive: true }
+  );
+}
+
+// Example: Attach listeners for the icons to open web links
+
+// Check if the screen width is less than or equal to 767px
+if (window.matchMedia("(max-width: 767px)").matches) {
+  // Apply the event listeners to your window icons
+  addOpenWindowListener("info-icon", "info-window");
+  addOpenWindowListener("info-iconHrdwr", "info-window-hardware");
+  addOpenWindowListener("info-iconWebDev", "info-window-webdev");
+  addOpenWindowListener("info-iconVR", "info-window-vr");
+  // addOpenWindowListener("info-iconBlog", "info-window3");
+  // addOpenWindowListener("info-iconGit", "info-window3");
+  // addOpenWindowListener("info-iconLinkIn", "info-window3");
+  addOpenWindowListener("info-iconTrash", "info-window-trash");
+  addOpenWindowListener("info-iconAboutMe", "info-window-aboutMe");
+  addOpenWindowListener("info-iconResume", "info-window-resume");
+  addOpenWindowListener("info-iconContact", "info-window-contact");
+  addOpenWindowListener("info-iconEmptyTrash", "info-window-emptyTrash");
+  addOpenWindowListener("info-iconContact", "info-window3");
+  addOpenWindowListener("info-iconMS", "info-window-ms");
+  // Below: Attach listeners for the icons to open web links:
+  addLinkOpenListener("info-iconBlog", "https://bloghoskins.blogspot.com");
+  addLinkOpenListener("info-iconGit", "https://github.com/gary909");
+  addLinkOpenListener(
+    "info-iconLinkIn",
+    "https://www.linkedin.com/in/gary-white-3a779a51/"
+  );
+  addLinkOpenListener(
+    "info-iconOldSite",
+    "https://digitalsunsetstudios.com/index.html"
+  );
+}
