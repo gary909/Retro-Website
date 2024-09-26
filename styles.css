@@ -544,13 +544,23 @@ body {
   transition-delay: 0.5s; /* Delay the fade-in by 0.5s */
 }
 
-/********************Pixelated Image***************************/
+/********************Pixelated Image / About Me page***************************/
 .imageAboutMe {
   /* width: 30%; */
   float: left; /* Float the image to the left */
   margin-right: 15px; /* Add space between the image and the text */
   margin-bottom: 5px; /* Add space at the bottom to clear the image */
   max-width: 40%; /* Set a percentage width to keep the image responsive */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.imageAboutMe2 {
+  /* width: 30%; */
+  float: right; /* Float the image to the left */
+  margin-left: 15px; /* Add space between the image and the text */
+  margin-bottom: 5px; /* Add space at the bottom to clear the image */
+  margin-top: 5px;
+  max-width: 60%; /* Set a percentage width to keep the image responsive */
   height: auto; /* Maintain aspect ratio */
 }
 
