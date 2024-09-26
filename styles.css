@@ -178,6 +178,9 @@ body {
 @media (max-width: 767px) {
   .navbar-left {
     margin-left: 20px; /* Add 20px gap to the first item on the left */
+    /* margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 22px; */
   }
 }
 
@@ -232,6 +235,7 @@ body {
   position: absolute;
   left: 0;
   top: 100%;
+  width: 90px;
   background-color: #efefef;
   /* border: 1px solid #000; */
   color: #004f9f;
@@ -246,7 +250,7 @@ body {
 
 .dropdown a {
   display: block;
-  padding: 5px 10px;
+  padding: 5px 5px;
   text-decoration: none;
   color: #004f9f; /* drop down font colour */
 }
@@ -337,8 +341,8 @@ body {
   /* overflow: auto; */
 
   /* Ensure the window never exceeds the viewport */
-  max-width: 100vw; /* Maximum width is 100% of the viewport width */
-  max-height: 100vh; /* Maximum height is 100% of the viewport height */
+  max-width: 95vw; /* Maximum width is 100% of the viewport width */
+  max-height: 90vh; /* Maximum height is 100% of the viewport height */
   min-width: 200px; /* Minimum width to avoid shrinking too much */
   min-height: 150px; /* Minimum height */
 }
