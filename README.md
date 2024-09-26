@@ -1,5 +1,9 @@
 "# Retro-Website" 
 
+Newly opened windows now always open above previous windows:
+
+![newOpenWin-ezgif com-optimize](https://github.com/user-attachments/assets/65c0612f-2b61-4dfd-91f5-fdaf8150ea03)
+
 Added anoyying clippy gif:
 
 ![clippyGif](https://github.com/user-attachments/assets/7b778e8c-e38b-4d28-9256-caef1a1ecca4)
