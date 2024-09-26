@@ -196,6 +196,9 @@ function toggleWindow(element) {
 
   // Add the show class to trigger the grow-out animation
   element.classList.add("show");
+
+  // Set the window to the highest z-index
+  element.style.zIndex = getNextZIndex();
 }
 
 function closeWindow(element) {
