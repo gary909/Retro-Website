@@ -3,8 +3,8 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Duration for each splash screen in milliseconds
   // const SPLASH_DURATION = 500; // 0.5 seconds per splash screen
-  const SPLASH1_DURATION = 600; // 600 0.7 seconds for first splash
-  const SPLASH2_DURATION = 1500; // 1500 0.5 seconds for second splash
+  const SPLASH1_DURATION = 10; // 600 0.7 seconds for first splash
+  const SPLASH2_DURATION = 10; // 1500 0.5 seconds for second splash
 
   // Get references to the splash screens and main content
   const splash1 = document.getElementById("splash1");
@@ -953,5 +953,5 @@ setTimeout(function () {
   setTimeout(function () {
     clippyGif.classList.remove("show");
     clippyGif.classList.add("hide");
-  }, 3000); // Keep it visible for 3 seconds
-}, 3300); // Wait 30 seconds before showing the GIF
+  }, 2000); // Keep it visible for 2 seconds
+}, 3300); // Wait 3.3 seconds before showing the GIF

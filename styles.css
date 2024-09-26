@@ -557,6 +557,13 @@ body {
 /********************Window Text Alignment***************************/
 .window-body p {
   text-align: justify; /* Optional: Adjusts the text alignment to make it look neat */
+  margin-right: 5px;
+}
+
+/********************Minor Text Title Headings***************************/
+.textTitle {
+  color: #0101ca;
+  font-weight: 600;
 }
 
 /********************Pixelated Image***************************/
