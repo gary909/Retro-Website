@@ -186,6 +186,11 @@ makeDraggable(
   document.getElementById("emptyTrash-header")
 );
 
+// makeDraggable(
+//   document.getElementById("info-window-cookies"),
+//   document.getElementById("cookies-header")
+// );
+
 //************************shrink open/close window anim******************************* */
 function toggleWindow(element) {
   // Set the display to block first, and then use setTimeout to apply the show class
@@ -638,6 +643,31 @@ const hardwareWindow = document.getElementById("info-window-hardware");
 projectsLink.addEventListener("click", function (event) {
   toggleWindow(document.getElementById("info-window-hardware"));
   closeAllDropdowns();
+});
+
+//****************************** Cookies NAV BAR *************************/
+// Get the "Projects" link and hardware window elements
+const cookiesLink = document.getElementById("cookies-link");
+const cookiesWindow = document.getElementById("info-window-cookies");
+
+// Function to open the hardware window
+cookiesLink.addEventListener("click", function (event) {
+  toggleWindow(document.getElementById("info-window-cookies"));
+  closeAllDropdowns();
+});
+
+// Get the button element by its ID
+document.getElementById("leave-btn").addEventListener("click", function () {
+  // Redirect to the desired website
+  window.location.href = "https://cats.com/"; // Replace with your desired URL
+});
+
+const cookieWindow = document.getElementById("info-window-cookies");
+
+// Get the button element by its ID
+document.getElementById("stay-btn").addEventListener("click", function () {
+  // Redirect to the desired website
+  cookieWindow.style.display = "none"; // Hide the cookie window
 });
 
 //*************************Pixelated Bio Image reveal****************************** */
