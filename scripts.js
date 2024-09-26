@@ -939,3 +939,19 @@ setTimeout(function () {
 setTimeout(function () {
   document.body.style.backgroundColor = "#004f9f";
 }, 2000); // 2000 milliseconds = 2 seconds
+
+//****************************Clippy GIF JS*********************************/
+
+// Wait 30 seconds before showing Clippy
+setTimeout(function () {
+  const clippyGif = document.getElementById("clippyGif");
+
+  // Fade in Clippy
+  clippyGif.classList.add("show");
+
+  // After 3 seconds, fade out Clippy
+  setTimeout(function () {
+    clippyGif.classList.remove("show");
+    clippyGif.classList.add("hide");
+  }, 3000); // Keep it visible for 3 seconds
+}, 3300); // Wait 30 seconds before showing the GIF

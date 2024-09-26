@@ -867,3 +867,23 @@ td {
   font-size: 12px;
   cursor: pointer;
 }
+
+/********************Clippy Styling***************************/
+
+.clippy-gif {
+  position: fixed;
+  bottom: 20px; /* Position from the bottom */
+  right: 20px; /* Position from the right */
+  width: 150px; /* Adjust size as needed */
+  opacity: 0; /* Initially invisible */
+  transition: opacity 1s ease-in-out; /* Smooth fade-in and fade-out */
+  z-index: 1000; /* Ensure it stays above other elements */
+}
+
+.clippy-gif.show {
+  opacity: 1; /* Make visible */
+}
+
+.clippy-gif.hide {
+  opacity: 0; /* Make invisible */
+}
