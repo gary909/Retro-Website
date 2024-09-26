@@ -1,4 +1,5 @@
-"# Retro-Website" 
+"# Retro-Website"
+
 Icons now open upon touch in mobile view
 Newly opened windows now always open above previous windows:
 
