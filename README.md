@@ -1,5 +1,5 @@
 "# Retro-Website" 
-
+Icons now open upon touch in mobile view
 Newly opened windows now always open above previous windows:
 
 ![newOpenWin-ezgif com-optimize](https://github.com/user-attachments/assets/65c0612f-2b61-4dfd-91f5-fdaf8150ea03)
