@@ -1,5 +1,7 @@
 "# Retro-Website"
 
+nav logo tooltip text added
+
 Icons now open upon touch in mobile view
 
 Newly opened windows now always open above previous windows:
