@@ -189,7 +189,7 @@ body {
   /*margin-left: auto; /* Pushes the time/date to the right */
   display: flex;
   align-items: center; /* Vertically center both the fullscreen button and the time/date */
-  margin-right: 20px !important;
+  margin-right: 10px !important;
   font-family: "Tahoma", sans-serif;
   font-size: 14px;
   color: white; /* Adjust text color to match your navbar */
