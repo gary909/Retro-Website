@@ -1,5 +1,7 @@
 "# Retro-Website"
 
+TO DO: Update mobile view
+
 nav logo tooltip text added
 
 Icons now open upon touch in mobile view
