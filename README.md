@@ -1,6 +1,7 @@
 "# Retro-Website"
 
 TO DO: Update mobile view
+// see lines 346, 347, 350 -- min width, max width etc
 
 nav logo tooltip text added
 
