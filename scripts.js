@@ -986,8 +986,22 @@ setTimeout(function () {
   setTimeout(function () {
     clippyGif.classList.remove("show");
     clippyGif.classList.add("hide");
-  }, 2000); // Keep it visible for 2 seconds
+  }, 5000); // Keep it visible for 5 seconds
 }, 3300); // Wait 3.3 seconds before showing the GIF
+
+// Wait 30 seconds before showing Clippy MESSAGE ***************************
+setTimeout(function () {
+  const clippyMessage = document.getElementById("clippyMessage");
+
+  // Fade in Clippy
+  clippyMessage.classList.add("show");
+
+  // After 3 seconds, fade out Clippy
+  setTimeout(function () {
+    clippyMessage.classList.remove("show");
+    clippyMessage.classList.add("hide");
+  }, 4000); // Keep it visible for 3 seconds
+}, 4000); // Wait 3.5 seconds before showing the clippy Message
 
 //****************************Make icons clickable under mobile*********************************/
 
