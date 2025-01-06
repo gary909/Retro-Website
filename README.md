@@ -3,6 +3,10 @@
 TO DO: Update mobile view
 // see lines 346, 347, 350 -- min width, max width etc
 
+Added a welcome message along with the clippy gif:
+
+![clippyMessage-ezgif com-optimize](https://github.com/user-attachments/assets/641222d0-8d0c-4b89-a19a-7763df247d15)
+
 nav logo tooltip text added
 
 Icons now open upon touch in mobile view
