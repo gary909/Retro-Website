@@ -1,7 +1,7 @@
 "# Retro-Website"
 
-TO DO: Update mobile view
-// see lines 346, 347, 350 -- min width, max width etc
+Completed: Update mobile view.  Changed view port now  mobile view is correct.
+// see lines 6 for changes
 
 Added a welcome message along with the clippy gif:
 
