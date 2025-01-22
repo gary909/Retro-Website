@@ -254,7 +254,7 @@ document
   .getElementById("info-iconOldSite")
   .addEventListener("dblclick", function () {
     window.open(
-      "https://digitalsunsetstudios.com/index.html",
+      "https://digitalsunsetstudios.com/oldIndex.html",
       "_blank",
       "width=800,height=600"
     ); // Opens BLOG in a new tab
