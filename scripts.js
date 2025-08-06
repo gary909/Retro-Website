@@ -1027,6 +1027,12 @@ setTimeout(function () {
       clippyKnockGif.classList.add("hide");
       clippyKnockMessage.classList.remove("show");
       clippyKnockMessage.classList.add("hide");
+      
+      // After fade out, change z-index to prevent interaction
+      setTimeout(function() {
+        clippyKnockGif.style.zIndex = "-1";
+        clippyKnockMessage.style.zIndex = "-1";
+      }, 1000); // Wait for fade out transition to complete
     });
     
     // Leave button - redirect to cats.com
