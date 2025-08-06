@@ -1003,6 +1003,41 @@ setTimeout(function () {
   }, 4000); // Keep it visible for 3 seconds
 }, 4000); // Wait 3.5 seconds before showing the clippy Message
 
+//****************************Second Clippy Knock Popup*********************************/
+
+// Wait 12 seconds before showing the second Clippy
+setTimeout(function () {
+  const clippyKnockGif = document.getElementById("clippyKnockGif");
+  const clippyKnockMessage = document.getElementById("clippyKnockMessage");
+  
+  // Show the second Clippy GIF
+  clippyKnockGif.classList.add("show");
+  
+  // After 1 second, show the message
+  setTimeout(function () {
+    clippyKnockMessage.classList.add("show");
+    
+    // Add event listeners for the buttons
+    const stayBtn = document.getElementById("clippyStayBtn");
+    const leaveBtn = document.getElementById("clippyLeaveBtn");
+    
+    // Stay button - close the popup
+    stayBtn.addEventListener("click", function() {
+      clippyKnockGif.classList.remove("show");
+      clippyKnockGif.classList.add("hide");
+      clippyKnockMessage.classList.remove("show");
+      clippyKnockMessage.classList.add("hide");
+    });
+    
+    // Leave button - redirect to cats.com
+    leaveBtn.addEventListener("click", function() {
+      window.location.href = "https://cats.com";
+    });
+    
+  }, 1000); // Wait 1 second before showing the message
+  
+}, 9000); // Wait 12 seconds before showing the second Clippy
+
 //****************************Make icons clickable under mobile*********************************/
 
 // Function to open a window based on device type

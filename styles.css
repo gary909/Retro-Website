@@ -984,6 +984,84 @@ td {
   opacity: 0; /* Make invisible */
 }
 
+/********************Second Clippy Knock Popup***************************/
+
+.clippy-knock-gif {
+  position: fixed;
+  bottom: 20px; /* Position from the bottom */
+  left: 20px; /* Position from the left */
+  width: 150px; /* Same size as original clippy */
+  opacity: 0; /* Initially invisible */
+  transition: opacity 1s ease-in-out; /* Smooth fade-in and fade-out */
+  z-index: 1000; /* Same z-index as original clippy */
+}
+
+.clippy-knock-gif.show {
+  opacity: 1; /* Make visible */
+}
+
+.clippy-knock-gif.hide {
+  opacity: 0; /* Make invisible */
+}
+
+.clippy-knock-message {
+  position: fixed;
+  bottom: 180px; /* Position from the bottom - same as original clippy */
+  left: 20px; /* Position from the left */
+  width: 200px; /* Wider to accommodate text and buttons */
+  opacity: 0; /* Initially invisible */
+  transition: opacity 1s ease-in-out; /* Smooth fade-in and fade-out */
+  z-index: 1010; /* Same z-index as original clippy */
+  background: #FDFBD3;
+  border-radius: 15px;
+  border: 2px solid #000;
+  padding: 15px;
+  box-shadow: 3px 3px 0px #000;
+}
+
+.clippy-knock-message.show {
+  opacity: 1; /* Make visible */
+}
+
+.clippy-knock-message.hide {
+  opacity: 0; /* Make invisible */
+}
+
+.clippy-knock-message p {
+  margin: 0 0 15px 0;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #000;
+}
+
+.clippy-knock-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.clippy-knock-btn {
+  background-color: #c0c0c0; /* Classic Windows 3.1 button background color */
+  border: 2px solid #ffffff; /* Light border on the top and left */
+  border-right-color: #808080; /* Dark border on the right */
+  border-bottom-color: #808080; /* Dark border on the bottom */
+  padding: 5px 10px;
+  margin-right: 10px;
+  font-family: Tahoma, sans-serif; /* Similar to Windows 3.1 font */
+  font-size: 14px;
+  color: black;
+  box-shadow: inset 1px 1px 0px #808080, inset -1px -1px 0px #ffffff; /* Inset shadow for a pressed effect */
+  cursor: pointer;
+}
+
+.clippy-knock-btn:active {
+  border-left-color: #5c5c5c; /* Dark border on the left */
+  border-top-color: #5a5a5a; /* Dark border on the top */
+  border-right-color: #ffffff; /* Light border on the right */
+  border-bottom-color: #ffffff; /* Light border on the bottom */
+  box-shadow: inset -1px -1px 0px #808080, inset 1px 1px 0px #ffffff; /* Inverted inset shadow for a pressed effect */
+}
+
 /********************Hide desktop items under 600px***************************/
 /* Hide icons for screens smaller than 600px */
 /* @media (max-width: 600px) {
