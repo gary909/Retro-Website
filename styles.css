@@ -1069,3 +1069,10 @@ td {
     display: none;
   }
 } */
+
+.clippy-knock-gif.hide,
+.clippy-knock-message.hide {
+  display: none !important;
+  pointer-events: none !important;
+  visibility: hidden !important;
+}

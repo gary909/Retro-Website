@@ -1005,42 +1005,54 @@ setTimeout(function () {
 
 //****************************Second Clippy Knock Popup*********************************/
 
+// Flag to prevent multiple event listeners
+let clippyEventListenersAdded = false;
+
 // Wait 12 seconds before showing the second Clippy
 setTimeout(function () {
   const clippyKnockGif = document.getElementById("clippyKnockGif");
   const clippyKnockMessage = document.getElementById("clippyKnockMessage");
   
-  // Show the second Clippy GIF
-  clippyKnockGif.classList.add("show");
-  
-  // After 1 second, show the message
-  setTimeout(function () {
-    clippyKnockMessage.classList.add("show");
+  if (clippyKnockGif && clippyKnockMessage) {
+    // Show the second Clippy GIF
+    clippyKnockGif.classList.add("show");
     
-    // Add event listeners for the buttons
-    const stayBtn = document.getElementById("clippyStayBtn");
-    const leaveBtn = document.getElementById("clippyLeaveBtn");
-    
-    // Stay button - close the popup
-    stayBtn.addEventListener("click", function() {
-      clippyKnockGif.classList.remove("show");
-      clippyKnockGif.classList.add("hide");
-      clippyKnockMessage.classList.remove("show");
-      clippyKnockMessage.classList.add("hide");
+    // After 1 second, show the message
+    setTimeout(function () {
+      clippyKnockMessage.classList.add("show");
       
-      // After fade out, change z-index to prevent interaction
-      setTimeout(function() {
-        clippyKnockGif.style.zIndex = "-1";
-        clippyKnockMessage.style.zIndex = "-1";
-      }, 1000); // Wait for fade out transition to complete
-    });
-    
-    // Leave button - redirect to cats.com
-    leaveBtn.addEventListener("click", function() {
-      window.location.href = "https://cats.com";
-    });
-    
-  }, 1000); // Wait 1 second before showing the message
+      // Only add event listeners once
+      if (!clippyEventListenersAdded) {
+        const stayBtn = document.getElementById("clippyStayBtn");
+        const leaveBtn = document.getElementById("clippyLeaveBtn");
+        
+        if (stayBtn && leaveBtn) {
+          // Stay button - close the popup
+          stayBtn.addEventListener("click", function() {
+            // Immediately hide and disable
+            clippyKnockGif.style.display = "none";
+            clippyKnockMessage.style.display = "none";
+            clippyKnockGif.style.pointerEvents = "none";
+            clippyKnockMessage.style.pointerEvents = "none";
+            
+            // Remove classes
+            clippyKnockGif.classList.remove("show");
+            clippyKnockGif.classList.add("hide");
+            clippyKnockMessage.classList.remove("show");
+            clippyKnockMessage.classList.add("hide");
+          });
+          
+          // Leave button - redirect to cats.com
+          leaveBtn.addEventListener("click", function() {
+            window.location.href = "https://cats.com";
+          });
+          
+          clippyEventListenersAdded = true;
+        }
+      }
+      
+    }, 1000); // Wait 1 second before showing the message
+  }
   
 }, 9000); // Wait 12 seconds before showing the second Clippy
 
