@@ -764,6 +764,15 @@ body {
        e.g., height: 400px; or height: 100vh; */
 }
 
+/********************JT4000 Window***************************/
+
+.info-window-jt {
+  width: 635px;
+  height: 470px;
+}
+
+
+
 
 /********************Blog Text Carousel***************************/
 

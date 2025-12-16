@@ -191,6 +191,11 @@ makeDraggable(
   document.getElementById("bubs-header")
 );
 
+makeDraggable(
+  document.getElementById("info-window-jt"),
+  document.getElementById("jt-header")
+);
+
 // makeDraggable(
 //   document.getElementById("info-window-cookies"),
 //   document.getElementById("cookies-header")
@@ -323,6 +328,12 @@ document
     toggleWindow(document.getElementById("info-window-bubs"));
   });
 
+document
+  .getElementById("info-iconJT")
+  .addEventListener("dblclick", function () {
+    toggleWindow(document.getElementById("info-window-jt"));
+  });  
+
 
 document.querySelectorAll(".close-btn").forEach((btn) => {
   btn.addEventListener("click", function () {
@@ -410,9 +421,14 @@ document.getElementById("trash-text").addEventListener("dblclick", function () {
   toggleWindow(document.getElementById("info-window-trash"));
 });
 
-// Bubs icon text clickable ------GARY HERE YOU FOOL!!!!-------
+// Bubs icon text clickable
 document.getElementById("bubs-text").addEventListener("dblclick", function () {
   toggleWindow(document.getElementById("info-window-bubs"));
+});
+
+// JT4000 icon text clickable ------GARY HERE YOU FOOL!!!!-------
+document.getElementById("jt-text").addEventListener("dblclick", function () {
+  toggleWindow(document.getElementById("info-window-jt"));
 });
 
 // Empty Trash icon text clickable
@@ -1149,6 +1165,7 @@ if (window.matchMedia("(max-width: 767px)").matches) {
   // addOpenWindowListener("info-iconLinkIn", "info-window3");
   addOpenWindowListener("info-iconTrash", "info-window-trash");
   addOpenWindowListener("info-iconBubs", "info-window-bubs");
+  addOpenWindowListener("info-iconJT", "info-window-jt");
   addOpenWindowListener("info-iconAboutMe", "info-window-aboutMe");
   addOpenWindowListener("info-iconResume", "info-window-resume");
   addOpenWindowListener("info-iconContact", "info-window-contact");
