@@ -735,6 +735,36 @@ body {
   width: 300px;
 }
 
+/********************Bubs Window***************************/
+
+.info-window-bubs {
+  width: 400px;
+  height: 500px;
+}
+
+.bubsGif {
+  display: block;
+  /* position: absolute; */
+  /* right: 30%; */
+  width: 360px;
+}
+
+.playStoreImgCenterer {
+    display: flex; 
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    height: 70px;
+    /* You must set a height for vertical centering to work, 
+       e.g., height: 400px; or height: 100vh; */
+}
+
+.playImg {
+    width: 150px;
+    /* You must set a height for vertical centering to work, 
+       e.g., height: 400px; or height: 100vh; */
+}
+
+
 /********************Blog Text Carousel***************************/
 
 .fade-container {

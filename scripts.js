@@ -186,6 +186,11 @@ makeDraggable(
   document.getElementById("emptyTrash-header")
 );
 
+makeDraggable(
+  document.getElementById("info-window-bubs"),
+  document.getElementById("bubs-header")
+);
+
 // makeDraggable(
 //   document.getElementById("info-window-cookies"),
 //   document.getElementById("cookies-header")
@@ -312,6 +317,13 @@ document
     toggleWindow(document.getElementById("info-window-emptyTrash"));
   });
 
+document
+  .getElementById("info-iconBubs")
+  .addEventListener("dblclick", function () {
+    toggleWindow(document.getElementById("info-window-bubs"));
+  });
+
+
 document.querySelectorAll(".close-btn").forEach((btn) => {
   btn.addEventListener("click", function () {
     closeWindow(this.parentElement);
@@ -398,12 +410,20 @@ document.getElementById("trash-text").addEventListener("dblclick", function () {
   toggleWindow(document.getElementById("info-window-trash"));
 });
 
+// Bubs icon text clickable ------GARY HERE YOU FOOL!!!!-------
+document.getElementById("bubs-text").addEventListener("dblclick", function () {
+  toggleWindow(document.getElementById("info-window-bubs"));
+});
+
 // Empty Trash icon text clickable
 document
   .getElementById("emptyTrash-text")
   .addEventListener("dblclick", function () {
     toggleWindow(document.getElementById("info-window-emptyTrash"));
-  });
+});
+
+
+
 
 //*************************Make nav bar open upon click****************************** */
 
@@ -1128,6 +1148,7 @@ if (window.matchMedia("(max-width: 767px)").matches) {
   // addOpenWindowListener("info-iconGit", "info-window3");
   // addOpenWindowListener("info-iconLinkIn", "info-window3");
   addOpenWindowListener("info-iconTrash", "info-window-trash");
+  addOpenWindowListener("info-iconBubs", "info-window-bubs");
   addOpenWindowListener("info-iconAboutMe", "info-window-aboutMe");
   addOpenWindowListener("info-iconResume", "info-window-resume");
   addOpenWindowListener("info-iconContact", "info-window-contact");
