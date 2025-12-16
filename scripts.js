@@ -334,6 +334,16 @@ document
     toggleWindow(document.getElementById("info-window-jt"));
   });  
 
+document
+  .getElementById("info-iconPix")
+  .addEventListener("dblclick", function () {
+    window.open(
+      "https://gary909.github.io/Pixelate-App/",
+      "_blank",
+      "width=600,height=550"
+    ); // Opens Pixelate App in a new tab
+  });  
+
 
 document.querySelectorAll(".close-btn").forEach((btn) => {
   btn.addEventListener("click", function () {
@@ -426,10 +436,20 @@ document.getElementById("bubs-text").addEventListener("dblclick", function () {
   toggleWindow(document.getElementById("info-window-bubs"));
 });
 
-// JT4000 icon text clickable ------GARY HERE YOU FOOL!!!!-------
+// JT4000 icon text clickable
 document.getElementById("jt-text").addEventListener("dblclick", function () {
   toggleWindow(document.getElementById("info-window-jt"));
 });
+
+// Pixelate icon text clickable
+document.getElementById("pix-text").addEventListener("dblclick", function () {
+  window.open(
+    "https://gary909.github.io/Pixelate-App/",
+    "_blank",
+    "width=600,height=550"
+  ); // Opens Pixelate App in a new tab
+});
+
 
 // Empty Trash icon text clickable
 document
