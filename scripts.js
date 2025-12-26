@@ -1196,7 +1196,6 @@ if (window.matchMedia("(max-width: 767px)").matches) {
 
   addOpenWindowListener("info-iconJT", "info-window-jt");
   addOpenWindowListener("jt-text", "info-window-jt");
-  
 
   addOpenWindowListener("info-iconAboutMe", "info-window-aboutMe");
   addOpenWindowListener("aboutMe-text", "info-window-aboutMe");
