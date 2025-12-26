@@ -1177,31 +1177,62 @@ function addLinkOpenListener(iconId, url) {
 if (window.matchMedia("(max-width: 767px)").matches) {
   // Apply the event listeners to your window icons
   addOpenWindowListener("info-icon", "info-window");
+  addOpenWindowListener("about-text", "info-window");
+
   addOpenWindowListener("info-iconHrdwr", "info-window-hardware");
+  addOpenWindowListener("hdwr-text", "info-window-hardware");
+
   addOpenWindowListener("info-iconWebDev", "info-window-webdev");
+  addOpenWindowListener("webdev-text", "info-window-webdev"); 
+
   addOpenWindowListener("info-iconVR", "info-window-vr");
-  // addOpenWindowListener("info-iconBlog", "info-window3");
-  // addOpenWindowListener("info-iconGit", "info-window3");
-  // addOpenWindowListener("info-iconLinkIn", "info-window3");
+  addOpenWindowListener("vr-text", "info-window-vr");
+
   addOpenWindowListener("info-iconTrash", "info-window-trash");
+  addOpenWindowListener("trash-text", "info-window-trash");
+
   addOpenWindowListener("info-iconBubs", "info-window-bubs");
+  addOpenWindowListener("bubs-text", "info-window-bubs");
+
   addOpenWindowListener("info-iconJT", "info-window-jt");
+  addOpenWindowListener("jt-text", "info-window-jt");
+
   addOpenWindowListener("info-iconAboutMe", "info-window-aboutMe");
+  addOpenWindowListener("aboutMe-text", "info-window-aboutMe");
+
   addOpenWindowListener("info-iconResume", "info-window-resume");
+  addOpenWindowListener("resume-text", "info-window-resume");
+
   addOpenWindowListener("info-iconContact", "info-window-contact");
+  addOpenWindowListener("contact-text", "info-window-contact");
+
   addOpenWindowListener("info-iconEmptyTrash", "info-window-emptyTrash");
-  addOpenWindowListener("info-iconContact", "info-window3");
+  addOpenWindowListener("emptyTrash-text", "info-window-emptyTrash");
+
+  // addOpenWindowListener("info-iconContact", "info-window3");
+  // addOpenWindowListener("contact-text", "info-window-contact");
+
   addOpenWindowListener("info-iconMS", "info-window-ms");
+  addOpenWindowListener("ms-text", "info-window-ms");
+
   // Below: Attach listeners for the icons to open web links:
   addLinkOpenListener("info-iconBlog", "https://bloghoskins.blogspot.com");
+  addLinkOpenListener("blog-text", "https://bloghoskins.blogspot.com");
+
   addLinkOpenListener("info-iconGit", "https://github.com/gary909");
+  addLinkOpenListener("github-text", "https://github.com/gary909");
+
   addLinkOpenListener(
     "info-iconLinkIn",
     "https://www.linkedin.com/in/gary-white-3a779a51/"
   );
+  addLinkOpenListener("lkdIn-text", "https://www.linkedin.com/in/gary-white-3a779a51/");
+
   addLinkOpenListener(
     "info-iconOldSite",
-    "https://digitalsunsetstudios.com/index.html"
+    "https://digitalsunsetstudios.com/oldIndex.html"
   );
-  addLinkOpenListener("info-iconPix", "https://gary909.github.io/Pixelate-App/");
+
+  addLinkOpenListener("info-iconPix", "https://gary909.github.io/Pixelate-App/"); // clickable icon
+  addLinkOpenListener("pix-text", "https://gary909.github.io/Pixelate-App/"); // clickable text
 }
