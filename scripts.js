@@ -1203,4 +1203,5 @@ if (window.matchMedia("(max-width: 767px)").matches) {
     "info-iconOldSite",
     "https://digitalsunsetstudios.com/index.html"
   );
+  addLinkOpenListener("info-iconPix", "https://gary909.github.io/Pixelate-App/");
 }
