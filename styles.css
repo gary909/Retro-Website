@@ -1121,7 +1121,7 @@ td {
   /* This prevents the entire body from becoming a grid and ruining the logo alignment */
   body {
     display: block; 
-    padding-top: 60px; /* Space for the nav bar */
+    padding-top: 10px; /* Space for the nav bar */
   }
 
   /* Create a specific container for the icons if you haven't, 
