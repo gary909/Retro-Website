@@ -1115,3 +1115,26 @@ td {
   pointer-events: none !important;
   visibility: hidden !important;
 }
+
+/* Mobile Grid Fix */
+@media (max-width: 767px) {
+  /* This prevents the entire body from becoming a grid and ruining the logo alignment */
+  body {
+    display: block; 
+    padding-top: 60px; /* Space for the nav bar */
+  }
+
+  /* Create a specific container for the icons if you haven't, 
+     or target the icon-containers directly */
+  .icon-container {
+    display: inline-flex;
+    width: 25%; /* This allows roughly 3-4 icons per row depending on margins */
+    margin: 10px 4%; /* Adjust horizontal margin to push them closer */
+    vertical-align: top;
+  }
+
+  .icon-text {
+    font-size: 11px; /* Smaller text to prevent wrapping issues */
+    max-width: 100%;
+  }
+}
