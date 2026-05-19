@@ -228,31 +228,31 @@ function closeWindow(element) {
 
 //************************Make Icons Clickable******************************* */
 
-document.getElementById("info-icon").addEventListener("dblclick", function () {
+document.getElementById("info-icon").addEventListener("click", function () {
   toggleWindow(document.getElementById("info-window"));
 });
 
 document
   .getElementById("info-iconHrdwr")
-  .addEventListener("dblclick", function () {
+  .addEventListener("click", function () {
     toggleWindow(document.getElementById("info-window-hardware"));
   });
 
 document
   .getElementById("info-iconWebDev")
-  .addEventListener("dblclick", function () {
+  .addEventListener("click", function () {
     toggleWindow(document.getElementById("info-window-webdev"));
   });
 
 document
   .getElementById("info-iconVR")
-  .addEventListener("dblclick", function () {
+  .addEventListener("click", function () {
     toggleWindow(document.getElementById("info-window-vr"));
   });
 
 document
   .getElementById("info-iconBlog")
-  .addEventListener("dblclick", function () {
+  .addEventListener("click", function () {
     window.open(
       " https://bloghoskins.blogspot.com/",
       "_blank",
@@ -262,7 +262,7 @@ document
 
 document
   .getElementById("info-iconOldSite")
-  .addEventListener("dblclick", function () {
+  .addEventListener("click", function () {
     window.open(
       "https://digitalsunsetstudios.com/oldIndex.html",
       "_blank",
@@ -272,13 +272,13 @@ document
 
 document
   .getElementById("info-iconGit")
-  .addEventListener("dblclick", function () {
+  .addEventListener("click", function () {
     window.open("https://github.com/gary909", "_blank", "width=800,height=600"); // Opens GITHUB in a new tab
   });
 
 document
   .getElementById("info-iconLinkIn")
-  .addEventListener("dblclick", function () {
+  .addEventListener("click", function () {
     window.open(
       "https://www.linkedin.com/in/gary-white-3a779a51/",
       "_blank",
@@ -288,55 +288,55 @@ document
 
 document
   .getElementById("info-iconAboutMe")
-  .addEventListener("dblclick", function () {
+  .addEventListener("click", function () {
     toggleWindow(document.getElementById("info-window-aboutMe"));
   });
 
 document
   .getElementById("info-iconResume")
-  .addEventListener("dblclick", function () {
+  .addEventListener("click", function () {
     toggleWindow(document.getElementById("info-window-resume"));
   });
 
 document
   .getElementById("info-iconContact")
-  .addEventListener("dblclick", function () {
+  .addEventListener("click", function () {
     toggleWindow(document.getElementById("info-window-contact"));
   });
 
 document
   .getElementById("info-iconMS")
-  .addEventListener("dblclick", function () {
+  .addEventListener("click", function () {
     toggleWindow(document.getElementById("info-window-ms"));
   });
 
 document
   .getElementById("info-iconTrash")
-  .addEventListener("dblclick", function () {
+  .addEventListener("click", function () {
     toggleWindow(document.getElementById("info-window-trash"));
   });
 
 document
   .getElementById("info-iconEmptyTrash")
-  .addEventListener("dblclick", function () {
+  .addEventListener("click", function () {
     toggleWindow(document.getElementById("info-window-emptyTrash"));
   });
 
 document
   .getElementById("info-iconBubs")
-  .addEventListener("dblclick", function () {
+  .addEventListener("click", function () {
     toggleWindow(document.getElementById("info-window-bubs"));
   });
 
 document
   .getElementById("info-iconJT")
-  .addEventListener("dblclick", function () {
+  .addEventListener("click", function () {
     toggleWindow(document.getElementById("info-window-jt"));
   });  
 
 document
   .getElementById("info-iconPix")
-  .addEventListener("dblclick", function () {
+  .addEventListener("click", function () {
     window.open(
       "https://gary909.github.io/Pixelate-App/",
       "_blank",
@@ -354,50 +354,50 @@ document.querySelectorAll(".close-btn").forEach((btn) => {
 //************************Make Icon text Clickable******************************* */
 
 // main About (desktop) text clickable
-document.getElementById("about-text").addEventListener("dblclick", function () {
+document.getElementById("about-text").addEventListener("click", function () {
   toggleWindow(document.getElementById("info-window"));
 });
 
 // AboutMe (windowed) text clickable
 document
   .getElementById("aboutMe-text")
-  .addEventListener("dblclick", function () {
+  .addEventListener("click", function () {
     toggleWindow(document.getElementById("info-window-aboutMe"));
   });
 
 // Resume (windowed) text clickable
 document
   .getElementById("resume-text")
-  .addEventListener("dblclick", function () {
+  .addEventListener("click", function () {
     toggleWindow(document.getElementById("info-window-resume"));
   });
 
 // contact icon (windowed) text clickable
 document
   .getElementById("contact-text")
-  .addEventListener("dblclick", function () {
+  .addEventListener("click", function () {
     toggleWindow(document.getElementById("info-window-contact"));
   });
 
 // hardware icon text clickable
-document.getElementById("hdwr-text").addEventListener("dblclick", function () {
+document.getElementById("hdwr-text").addEventListener("click", function () {
   toggleWindow(document.getElementById("info-window-hardware"));
 });
 
 // webdev icon text clickable
 document
   .getElementById("webdev-text")
-  .addEventListener("dblclick", function () {
+  .addEventListener("click", function () {
     toggleWindow(document.getElementById("info-window-webdev"));
   });
 
 // vr icon text clickable
-document.getElementById("vr-text").addEventListener("dblclick", function () {
+document.getElementById("vr-text").addEventListener("click", function () {
   toggleWindow(document.getElementById("info-window-vr"));
 });
 
 // blog icon text clickable
-document.getElementById("blog-text").addEventListener("dblclick", function () {
+document.getElementById("blog-text").addEventListener("click", function () {
   window.open(
     "https://bloghoskins.blogspot.com/",
     "_blank",
@@ -408,12 +408,12 @@ document.getElementById("blog-text").addEventListener("dblclick", function () {
 // Github icon text clickable
 document
   .getElementById("github-text")
-  .addEventListener("dblclick", function () {
+  .addEventListener("click", function () {
     window.open("https://github.com/gary909", "_blank", "width=800,height=600"); // Opens GITHUB in a new tab
   });
 
 // LinkedIn icon text clickable
-document.getElementById("lkdIn-text").addEventListener("dblclick", function () {
+document.getElementById("lkdIn-text").addEventListener("click", function () {
   window.open(
     "https://www.linkedin.com/in/gary-white-3a779a51/",
     "_blank",
@@ -422,27 +422,27 @@ document.getElementById("lkdIn-text").addEventListener("dblclick", function () {
 });
 
 // Minesweeper icon text clickable
-document.getElementById("ms-text").addEventListener("dblclick", function () {
+document.getElementById("ms-text").addEventListener("click", function () {
   toggleWindow(document.getElementById("info-window-ms"));
 });
 
 // Trash icon text clickable
-document.getElementById("trash-text").addEventListener("dblclick", function () {
+document.getElementById("trash-text").addEventListener("click", function () {
   toggleWindow(document.getElementById("info-window-trash"));
 });
 
 // Bubs icon text clickable
-document.getElementById("bubs-text").addEventListener("dblclick", function () {
+document.getElementById("bubs-text").addEventListener("click", function () {
   toggleWindow(document.getElementById("info-window-bubs"));
 });
 
 // JT4000 icon text clickable
-document.getElementById("jt-text").addEventListener("dblclick", function () {
+document.getElementById("jt-text").addEventListener("click", function () {
   toggleWindow(document.getElementById("info-window-jt"));
 });
 
 // Pixelate icon text clickable
-document.getElementById("pix-text").addEventListener("dblclick", function () {
+document.getElementById("pix-text").addEventListener("click", function () {
   window.open(
     "https://gary909.github.io/Pixelate-App/",
     "_blank",
@@ -454,7 +454,7 @@ document.getElementById("pix-text").addEventListener("dblclick", function () {
 // Empty Trash icon text clickable
 document
   .getElementById("emptyTrash-text")
-  .addEventListener("dblclick", function () {
+  .addEventListener("click", function () {
     toggleWindow(document.getElementById("info-window-emptyTrash"));
 });
 
