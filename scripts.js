@@ -331,8 +331,12 @@ document
 document
   .getElementById("info-iconJT")
   .addEventListener("click", function () {
-    toggleWindow(document.getElementById("info-window-jt"));
-  });  
+    window.open(
+      "https://behringer-synth-editor.co.uk/",
+      "_blank",
+      "width=1024,height=768"
+    );
+  });
 
 document
   .getElementById("info-iconPix")
@@ -434,11 +438,6 @@ document.getElementById("trash-text").addEventListener("click", function () {
 // Bubs icon text clickable
 document.getElementById("bubs-text").addEventListener("click", function () {
   toggleWindow(document.getElementById("info-window-bubs"));
-});
-
-// JT4000 icon text clickable
-document.getElementById("jt-text").addEventListener("click", function () {
-  toggleWindow(document.getElementById("info-window-jt"));
 });
 
 // Pixelate icon text clickable
@@ -1194,8 +1193,12 @@ if (window.matchMedia("(max-width: 767px)").matches) {
   addOpenWindowListener("info-iconBubs", "info-window-bubs");
   addOpenWindowListener("bubs-text", "info-window-bubs");
 
-  addOpenWindowListener("info-iconJT", "info-window-jt");
-  addOpenWindowListener("jt-text", "info-window-jt");
+  document.getElementById("info-iconJT").addEventListener("click", function () {
+    window.open("https://behringer-synth-editor.co.uk/", "_blank", "width=1024,height=768");
+  });
+  document.getElementById("jt-text").addEventListener("click", function () {
+    window.open("https://behringer-synth-editor.co.uk/", "_blank", "width=1024,height=768");
+  });
 
   addOpenWindowListener("info-iconAboutMe", "info-window-aboutMe");
   addOpenWindowListener("aboutMe-text", "info-window-aboutMe");
