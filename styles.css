@@ -742,6 +742,11 @@ body {
   height: 500px;
 }
 
+.info-window-gb {
+  width: 600px;
+  height: 767px;
+}
+
 .bubsGif {
   display: block;
   /* position: absolute; */

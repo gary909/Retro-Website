@@ -196,6 +196,11 @@ makeDraggable(
   document.getElementById("jt-header")
 );
 
+makeDraggable(
+  document.getElementById("info-window-gb"),
+  document.getElementById("gb-header")
+);
+
 // makeDraggable(
 //   document.getElementById("info-window-cookies"),
 //   document.getElementById("cookies-header")
@@ -346,7 +351,15 @@ document
       "_blank",
       "width=600,height=550"
     ); // Opens Pixelate App in a new tab
-  });  
+  });
+
+document
+  .getElementById("info-iconGB")
+  .addEventListener("click", function () {
+    toggleWindow(document.getElementById("info-window-gb"));
+  }); // opens Motodrome Drifter GB page
+
+
 
 
 document.querySelectorAll(".close-btn").forEach((btn) => {
@@ -447,6 +460,11 @@ document.getElementById("pix-text").addEventListener("click", function () {
     "_blank",
     "width=600,height=550"
   ); // Opens Pixelate App in a new tab
+});
+
+// GB icon text clickable
+document.getElementById("gb-text").addEventListener("click", function () {
+  toggleWindow(document.getElementById("info-window-gb"));
 });
 
 
@@ -1238,4 +1256,7 @@ if (window.matchMedia("(max-width: 767px)").matches) {
 
   addLinkOpenListener("info-iconPix", "https://gary909.github.io/Pixelate-App/"); // clickable icon
   addLinkOpenListener("pix-text", "https://gary909.github.io/Pixelate-App/"); // clickable text
+
+  addOpenWindowListener("info-iconGB", "info-window-gb");
+  addOpenWindowListener("gb-text", "info-window-gb");
 }
