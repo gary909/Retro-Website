@@ -767,6 +767,7 @@ body {
     transform: none !important;
     border: none !important;
     border-radius: 0 !important;
+    z-index: 9999 !important;
   }
 
   #info-window-gb .window-body iframe {
