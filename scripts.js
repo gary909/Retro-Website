@@ -1177,12 +1177,10 @@ function addLinkOpenListener(iconId, url) {
     handleOpenLink(event, url);
   });
 
-  // ); // This makes the event listener passive
   icon.addEventListener(
     "touchstart",
     function (event) {
-      const windowElement = document.getElementById(windowId); // Define windowElement here
-      handleOpenWindow(event, windowElement, windowId);
+      handleOpenLink(event, url);
     },
     { passive: true }
   );

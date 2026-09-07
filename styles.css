@@ -1056,6 +1056,7 @@ td {
   right: 20px; /* Position from the right */
   width: 150px; /* Adjust size as needed */
   opacity: 0; /* Initially invisible */
+  pointer-events: none; /* Decorative image only; must never block taps on icons underneath */
   transition: opacity 1s ease-in-out; /* Smooth fade-in and fade-out */
   z-index: 1000; /* Ensure it stays above other elements */
 }
@@ -1076,6 +1077,7 @@ td {
   right: 20px; /* Position from the right */
   width: 150px; /* Adjust size as needed */
   opacity: 0; /* Initially invisible */
+  pointer-events: none; /* Decorative image only; must never block taps on icons underneath */
   transition: opacity 1s ease-in-out; /* Smooth fade-in and fade-out */
   z-index: 1010; /* Ensure it stays above other elements */
 }
@@ -1096,6 +1098,7 @@ td {
   left: 20px; /* Position from the left */
   width: 150px; /* Same size as original clippy */
   opacity: 0; /* Initially invisible */
+  pointer-events: none; /* Decorative image only; must never block taps on icons underneath (was blocking mobile icons even while invisible) */
   transition: opacity 1s ease-in-out; /* Smooth fade-in and fade-out */
   z-index: 1000; /* Same z-index as original clippy */
 }
@@ -1114,6 +1117,7 @@ td {
   left: 20px; /* Position from the left */
   width: 200px; /* Wider to accommodate text and buttons */
   opacity: 0; /* Initially invisible */
+  pointer-events: none; /* Only interactive once actually shown (see .show below); was blocking mobile icons underneath even while invisible */
   transition: opacity 1s ease-in-out; /* Smooth fade-in and fade-out */
   z-index: 1010; /* Same z-index as original clippy */
   background: #FDFBD3;
@@ -1125,6 +1129,7 @@ td {
 
 .clippy-knock-message.show {
   opacity: 1; /* Make visible */
+  pointer-events: auto; /* Re-enable interaction with the Stay/Leave buttons while shown */
 }
 
 .clippy-knock-message.hide {
