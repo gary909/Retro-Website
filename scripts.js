@@ -192,6 +192,16 @@ makeDraggable(
 );
 
 makeDraggable(
+  document.getElementById("info-window-impressum"),
+  document.getElementById("impressum-header")
+);
+
+makeDraggable(
+  document.getElementById("info-window-datenschutz"),
+  document.getElementById("datenschutz-header")
+);
+
+makeDraggable(
   document.getElementById("info-window-jt"),
   document.getElementById("jt-header")
 );
@@ -451,6 +461,16 @@ document.getElementById("trash-text").addEventListener("click", function () {
 // Bubs icon text clickable
 document.getElementById("bubs-text").addEventListener("click", function () {
   toggleWindow(document.getElementById("info-window-bubs"));
+});
+
+// Impressum text clickable
+document.getElementById("impressum-text").addEventListener("click", function () {
+  toggleWindow(document.getElementById("info-window-impressum"));
+});
+
+// Datenschutzerklärung text clickable
+document.getElementById("datenschutz-text").addEventListener("click", function () {
+  toggleWindow(document.getElementById("info-window-datenschutz"));
 });
 
 // Pixelate icon text clickable
@@ -1208,6 +1228,10 @@ if (window.matchMedia("(max-width: 767px)").matches) {
 
   addOpenWindowListener("info-iconBubs", "info-window-bubs");
   addOpenWindowListener("bubs-text", "info-window-bubs");
+
+  addOpenWindowListener("impressum-text", "info-window-impressum");
+
+  addOpenWindowListener("datenschutz-text", "info-window-datenschutz");
 
   document.getElementById("info-iconJT").addEventListener("click", function () {
     window.open("https://behringer-synth-editor.co.uk/", "_blank", "width=1024,height=768");
